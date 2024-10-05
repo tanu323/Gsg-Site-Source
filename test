@@ -1,0 +1,28 @@
+<div id="centerpage1">
+    <div id="content-container">
+        <div id="left">
+            <div class="centerpage1-grid-1">
+                <div class="stat-box">
+                    <h2>$500M</h2>
+                </div>
+                <div class="centerpage1-box">
+                    <h2>📖</h2>
+                </div>
+                <div class="centerpage1-box">
+                    <h2>1 000 000+</h2>
+                </div>
+            </div>
+            <div class="centerpage1-grid-2">
+                <div class="centerpage1-box">
+                    <h2>25 million</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="right">
+            <h1>Skill<br>Empower<br> Achieve</h1>
+        </div>
+    </div>
+
+    <video autoplay loop muted src="./assets/img/VedioForRefrence.mp4"></video>
+</div>

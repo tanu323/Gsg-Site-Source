@@ -4,15 +4,21 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>Website</title>
+   <title>Eduvantage</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!-- Place favicon.ico in the root directory -->
-   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+   <link rel="shortcut icon" type="image/x-icon" href="assets/img/Favicon-Eduvantage.png">
 
    <!-- Linking swiper js here -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+   <!-- Linking Remix Icon CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+   <!-- Linking Locomotive CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" rel="stylesheet" />
 
    <!-- CSS here -->
    <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -30,6 +36,8 @@
 </head>
 
 <body>
+
+   <div id="Govt-Clients"></div>
    <!-- pre loader area start -->
    <div id="loading">
       <div id="loading-center">
@@ -52,173 +60,311 @@
    <div class="mouseCursor cursor-inner"><span>Drag</span></div> -->
 
    <!-- header area start -->
+   <header class="header">
+      <nav class="nav navContainer">
+         <a href="/arvilax/index.html" class="nav__logo">
+            <img src="/arvilax//assets//img/logo/logoNoBg.png" alt="edulogo">
+         </a>
+         <div class="nav_toggle" id="nav_toggle">
+            <i class="ri-menu-line nav_toggle-menu"></i>
+            <i class="ri-close-circle-line nav_toggle-close"></i>
+
+         </div>
+
+         <div class="nav_menu" id="nav_menu">
+            <ul class="nav_list">
+
+               <li>
+                  <div class="nav-link">
+                     <a href="index.html" onclick="setActiveLink(event)">Home</a>
+                  </div>
+               </li>
 
 
-   <header>
-      <div id="header-sticky" class="header__area header__transparent pr-90 pl-90 header-sticky-active">
-         <div class="header__main">
-            <div class="container-fluid">
-               <div class="row align-items-center">
-                  <div class="col-lg-2 col-md-4 col-7">
-                     <div class="logo">
-                        <a href="#">
-                           <img src="assets/img/logo/logo.png" alt="logo" class="m-none">
-                           <img src="assets/img/logo/logo.png" alt="logo" class="w-none">
-                        </a>
-                     </div>
+               <li>
+                  <div class="nav-link">
+                     <a href="#" onclick="setActiveLink(event)">About Us</a>
                   </div>
-                  <div class="col-lg-9 col-md-4 d-none d-md-block">
-                     <div class="main-menu text-center">
-                        <nav id="mobile-menu">
-                           <ul class="navbar">
-                              <li><a href="index.html" class="menu-link nav-link"
-                                    onclick="setActiveLink(event)">Home</a></li>
-                              <li><a href="aboutUs.html" class="menu-link nav-link" onclick="setActiveLink(event)">About
-                                    Us</a></li>
-                              <li>
-                                 <a href="assessments.html" class="menu-link nav-link"
-                                    onclick="setActiveLink(event)">Assessments</a>
-                                 <button class="ast-menu-toggle" aria-expanded="false">
-                                    <span class="ast-icon icon-arrow"></span>
-                                 </button>
-                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="universities.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">For Universities</a></li>
-                                    <li class="menu-item"><a href="schools.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">For Schools</a></li>
-                                    <li class="menu-item"><a href="corporates.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">For Corporates</a></li>
-                                    <li class="menu-item"><a href="sscs.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">For Sector Skill Council</a></li>
-                                    <li class="menu-item"><a href="individuals.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">For Individuals</a></li>
-                                    <li class="menu-item"><a href="types.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">Type of Assessments</a></li>
-                                 </ul>
-                              </li>
-                              <li><a href="apprenticeships.html" class="menu-link nav-link"
-                                    onclick="setActiveLink(event)">Apprenticeships/Hirings</a></li>
-                              <li>
-                                 <a href="media.html" class="menu-link nav-link"
-                                    onclick="setActiveLink(event)">Media/Events</a>
-                                 <button class="ast-menu-toggle" aria-expanded="false">
-                                    <span class="ast-icon icon-arrow"></span>
-                                 </button>
-                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="gallery.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">Gallery</a></li>
-                                    <li class="menu-item"><a href="videos.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">Videos</a></li>
-                                    <li class="menu-item"><a href="events.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">Events</a></li>
-                                    <li class="menu-item"><a href="blog.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">Blog</a></li>
-                                    <li class="menu-item"><a href="resources.html" class="menu-link nav-link"
-                                          onclick="setActiveLink(event)">Our Resources</a></li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </nav>
-                     </div>
+               </li>
+
+
+               <!-- For Assessments -->
+               <li class="dropdown_item">
+                  <div class="nav-link dropdown_button">
+                     <a href="assessments.html" onclick="setActiveLink(event)">Assessments</a><i
+                        class="ri-arrow-down-double-line "></i>
                   </div>
-                  <div class="col-lg-1 col-md-4 col-5">
-                     <div class="header__main_right d-flex justify-content-end align-items-center">
-                        <div class="tp-header-search-icons normal-search mr-80 p-relative">
-                           <div class="search-btn-wrap">
-                              <button class="button-search-toggle position-relative">
-                                 <i class="header_search-button text-white far fa-search"></i>
-                                 <i class="header_search-close text-white far fa-times"></i>
-                              </button>
-                              <div class="tp-search-form p-relative">
-                                 <form action="#">
-                                    <input type="text" placeholder="Search ...">
-                                    <button type="submit" class="search-submit-icon"><i
-                                          class="far fa-search"></i></button>
-                                 </form>
-                              </div>
+                  <div class="dropdown_container">
+                     <div class="dropdown_content">
+                        <div class="dropdown_group">
+                           <div class="dropdown_icon">
+                              <i class="ri-pen-nib-fill "></i>
                            </div>
+                           <span class="dropdown_title">Explore Assessment Solutions 1</span>
+                           <ul class="dropdown_list">
+                              <li><a class="dropdown_link" href="#">Universities 1</a></li>
+                              <li><a class="dropdown_link" href="#">Schools 1</a></li>
+                              <li><a class="dropdown_link" href="#">Corporates 1</a></li>
+                              <li><a class="dropdown_link" href="#">Sector Skill Councils 1</a></li>
+                              <li><a class="dropdown_link" href="#">Individuals 1</a></li>
+                           </ul>
                         </div>
-                        <div class="tp-bar-icon">
-                           <a href="javascript:void(0)" class="offcanvas-toggle-btn"><i class="fal fa-bars"></i></a>
+
+
+                        <div class="dropdown_group">
+                           <div class="dropdown_icon">
+                              <i class="ri-pen-nib-fill"></i>
+                           </div>
+                           <span class="dropdown_title">Explore Assessment Solutions 2</span>
+                           <ul class="dropdown_list">
+                              <li><a class="dropdown_link" href="#">Universities 2</a></li>
+                              <li><a class="dropdown_link" href="#">Schools 2</a></li>
+                              <li><a class="dropdown_link" href="#">Corporates 2</a></li>
+                              <li><a class="dropdown_link" href="#">Sector Skill Councils 2</a></li>
+                              <li><a class="dropdown_link" href="#">Individuals 2</a></li>
+                           </ul>
+                        </div>
+
+
+                        <div class="dropdown_group">
+                           <div class="dropdown_icon">
+                              <i class="ri-pen-nib-fill"></i>
+                           </div>
+                           <span class="dropdown_title">Explore Assessment Solutions 3</span>
+                           <ul class="dropdown_list">
+                              <li><a class="dropdown_link" href="#">Universities 3</a></li>
+                              <li><a class="dropdown_link" href="#">Schools 3</a></li>
+                              <li><a class="dropdown_link" href="#">Corporates 3</a></li>
+                              <li><a class="dropdown_link" href="#">Sector Skill Councils 3</a></li>
+                              <li><a class="dropdown_link" href="#">Individuals 3</a></li>
+                           </ul>
+                        </div>
+
+                     </div>
+
+                  </div>
+               </li>
+
+
+               <!-- For Apprenticeships -->
+               <li class="dropdown_item">
+                  <div class="nav-link dropdown_button">
+                     <a href="#" onclick="setActiveLink(event)">Apprenticeships</a><i
+                        class="ri-arrow-down-double-line "></i>
+                  </div>
+                  <div class="dropdown_container">
+                     <div class="dropdown_content">
+                        <div class="dropdown_group">
+                           <div class="dropdown_icon">
+                              <i class="ri-user-search-line"></i>
+                           </div>
+                           <span class="dropdown_title">National Apprenticeship Portal Scheme</span>
+                           <ul class="dropdown_list">
+                              <li><a class="dropdown_link" href="#">NAPS</a></li>
+                           </ul>
+                        </div>
+                        <div class="dropdown_group">
+                           <div class="dropdown_icon">
+                              <i class="ri-user-search-line"></i>
+                           </div>
+                           <span class="dropdown_title">National Apprenticeship Training Scheme</span>
+                           <ul class="dropdown_list">
+                              <li><a class="dropdown_link" href="#">NATS</a></li>
+                           </ul>
+                        </div>
+                        <div class="dropdown_group">
+                           <div class="dropdown_icon">
+                              <i class="ri-user-search-line"></i>
+                           </div>
+                           <span class="dropdown_title">Vocational Courses</span>
+                           <ul class="dropdown_list">
+                              <li><a class="dropdown_link" href=#">VOCs</a></li>
+                           </ul>
+                        </div>
+
+                     </div>
+
+                  </div>
+               </li>
+
+
+               <!-- For Gogig -->
+               <li class="dropdown_item">
+                  <div class="nav-link dropdown_button">
+                     <a href="gogig.html" onclick="setActiveLink(event)">GoGig</a><i
+                        class="ri-arrow-down-double-line "></i>
+                  </div>
+                  <div class="dropdown_container">
+                     <div class="dropdown_content">
+                        <div class="dropdown_group">
+                           <div class="dropdown_icon">
+                              <i class="ri-shield-user-line"></i>
+                           </div>
+                           <span class="dropdown_title">GoGig Company</span>
+                           <ul class="dropdown_list">
+                              <li><a class="dropdown_link" href="apprenticeships.html">GoGig Company</a></li>
+                           </ul>
+                        </div>
+
+                        <div class="dropdown_group">
+                           <div class="dropdown_icon">
+                              <i class="ri-shield-user-line"></i>
+                           </div>
+                           <span class="dropdown_title">GoGig Candidates</span>
+                           <ul class="dropdown_list">
+                              <li><a class="dropdown_link" href="apprenticeships.html">GoGig Candidates</a></li>
+                           </ul>
                         </div>
                      </div>
+
                   </div>
-               </div>
-            </div>
+               </li>
+
+
+               <li>
+                  <div class="nav-link">
+                     <a href="#" onclick="setActiveLink(event)">Events</a>
+                  </div>
+               </li>
+
+            </ul>
          </div>
-      </div>
+
+
+      </nav>
    </header>
-
-
-   <!-- offcanvas area -->
-   <div class="offcanvas__area off-canvas-bg" data-background="assets/img//bg/Sidearea-bg-img.png">
-      <div class="offcanvas_area-logo">
-         <span class="offcanvas__close-btn"><a href="javascript:void(0)"><i class="fal fa-times"></i></a></span>
-      </div>
-      <div class="offcanvas-content">
-         <div class="offcanvas-subtitle">
-            <span>ELEVATE YOUR BUSINESS WITH</span>
-         </div>
-         <div class="offcanvas-logo pb-30 pt-30">
-            <img src="assets/img/logo/logo.png" alt="">
-         </div>
-         <div class="offcanva-details">
-            <p>
-               Partner with Eduvantage for Comprehensive Corporate Assessments Tailored to Your Organization's Success.
-            </p>
-         </div>
-         <div class="offcanva-btn">
-            <a href="#" class="tp-slider-btn   mt-40 d-inline-block" tabindex="-1">
-               <span>
-                  <svg width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path
-                        d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z"
-                        fill="currentColor"></path>
-                  </svg>
-                  <svg width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path
-                        d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z"
-                        fill="currentColor"></path>
-                  </svg>
-               </span>Get in touch
-            </a>
-         </div>
-      </div>
-      <div class="tp-mobile-menu"></div>
-      <div class="tp-footer__widget pb-30 offcanvas-ct-info">
-         <h3 class="tp-footer__widget-title">Quick Links</h3>
-         <ul>
-            <li><a href="#">1020-1023, 10th Floor, Devika Tower, Nehru Place, Delhi-110019</a></li>
-            <li><a href="tel:+88015569569365">+91 11 4054 1330​</a></li>
-            <li><a href="mailto:support@example.com">admin@eduvantage.in</a></li>
-            <li><span> Office Hours: 10AM - 6PM</span></li>
-            <li><span> Saturday - Wekend Day</span></li>
-         </ul>
-      </div>
-   </div>
-   <div class="body-overlay"></div>
-   <!-- header area end -->
 
 
    <main>
 
-      <!-- hero slider start -->
-      <div class="tp-slider-area p-relative">
-         <div class="tp-hero_slider slider-active p-relative">
-            <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/hero-bg-1.2.jpg">
+      <div id="page1">
+         <div id="centerpage1">
+            <div id="left">
+               <div class="centerpage1-grid-1">
+                  <div class="centerpage1-box">
+                     <h2>EDUVANTAGE</h2>
+                  </div>
+                  <div class="centerpage1-box">
+                     <h2>📖</h2>
+                  </div>
+                  <div class="centerpage1-box">
+                     <p>"Your Talent, Our Expertise – Hire with Confidence!"</p>
+                  </div>
+               </div>
+               <div class="centerpage1-grid-2">
+                  <div class="centerpage1-box">
+                     <h2>SOLUTIONS</h2>
+                  </div>
+               </div>
+
+               <div id="eCover">
+                  <img src="./assets/img/eduvantageE-Logo.png" alt="">
+               </div>
+               <!-- <div class="grid-container">
+                  <div class="grid-item" id="grid1">Grid Item 1</div>
+                  <div class="grid-item" id="grid2">Grid Item 2</div>
+                  <div class="grid-item" id="grid3">Grid Item 3</div>
+               </div> -->
+
             </div>
-            <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/hero-bg.jpg">
-            </div>
-            <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/hero-bg-1.jpg">
+
+            <div id="right">
+               <h1>
+                  Precision in Assessing, Excellence in Hiring!
+                  <!-- Assess Precisely, Hire Confidently! -->
+                  <!-- Assess Smart-<br> Hire Right<br> -->
+               </h1>
             </div>
          </div>
-         <!-- <div class="slider-arrow"></div> -->
+         <div id="video-container">
+            <video autoplay loop muted src="./assets/img/VedioForRefrence.mp4"></video>
+         </div>
       </div>
-      <!-- hero slider end  -->
 
-      <!-- about area start -->
-      <div class="tp-about-area pt-140">
-         <div class="container">
+      <!-- Scrolling Text -->
+      <div id="page2">
+         <div id="moving-container">
+            <div class="left-sec">
+               <p>Our Latest Wins</p>
+            </div>
+            <div class="right-sec">
+               <div id="moving-text">
+
+                  <div class="moving-text-container">
+                     <div class="award-item">
+                        <img src="https://via.placeholder.com/100x100" alt="Award Image">
+                        <h3>The Webby Awards</h3>
+                        <p>Honoree. Websites and Mobile Sites. Best Home Page 2024</p>
+                        <a href="#" class="view-project">VIEW PROJECT <span>→</span></a>
+                     </div>
+                     <div class="seprator"></div>
+                     <div class="award-item">
+                        <img src="https://via.placeholder.com/100x100" alt="Award Image">
+                        <h3>Awwwards</h3>
+                        <p>Honorable Mention - Apr 17, 2024</p>
+                        <a href="#" class="view-project">VIEW PROJECT <span>→</span></a>
+                     </div>
+                     <div class="seprator"></div>
+                     <div class="award-item">
+                        <img src="https://via.placeholder.com/100x100" alt="Award Image">
+                        <h3>Awwwards</h3>
+                        <p>Honorable Mention - Mar 7, 2024</p>
+                        <a href="#" class="view-project">VIEW PROJECT <span>→</span></a>
+                     </div>
+                     <div class="seprator"></div>
+                  </div>
+                  <div class="moving-text-container">
+                     <div class="award-item">
+                        <img src="https://via.placeholder.com/100x100" alt="Award Image">
+                        <h3>The Webby Awards</h3>
+                        <p>Honoree. Websites and Mobile Sites. Best Home Page 2024</p>
+                        <a href="#" class="view-project">VIEW PROJECT <span>→</span></a>
+                     </div>
+                     <div class="seprator"></div>
+                     <div class="award-item">
+                        <img src="https://via.placeholder.com/100x100" alt="Award Image">
+                        <h3>Awwwards</h3>
+                        <p>Honorable Mention - Apr 17, 2024</p>
+                        <a href="#" class="view-project">VIEW PROJECT <span>→</span></a>
+                     </div>
+                     <div class="seprator"></div>
+                     <div class="award-item">
+                        <img src="https://via.placeholder.com/100x100" alt="Award Image">
+                        <h3>Awwwards</h3>
+                        <p>Honorable Mention - Mar 7, 2024</p>
+                        <a href="#" class="view-project">VIEW PROJECT <span>→</span></a>
+                     </div>
+                     <div class="seprator"></div>
+                  </div>
+                  <div class="moving-text-container">
+                     <div class="award-item">
+                        <img src="https://via.placeholder.com/100x100" alt="Award Image">
+                        <h3>The Webby Awards</h3>
+                        <p>Honoree. Websites and Mobile Sites. Best Home Page 2024</p>
+                        <a href="#" class="view-project">VIEW PROJECT <span>→</span></a>
+                     </div>
+                     <div class="seprator"></div>
+                     <div class="award-item">
+                        <img src="https://via.placeholder.com/100x100" alt="Award Image">
+                        <h3>Awwwards</h3>
+                        <p>Honorable Mention - Apr 17, 2024</p>
+                        <a href="#" class="view-project">VIEW PROJECT <span>→</span></a>
+                     </div>
+                     <div class="seprator"></div>
+                     <div class="award-item">
+                        <img src="https://via.placeholder.com/100x100" alt="Award Image">
+                        <h3>Awwwards</h3>
+                        <p>Honorable Mention - Mar 7, 2024</p>
+                        <a href="#" class="view-project">VIEW PROJECT <span>→</span></a>
+                     </div>
+                     <div class="seprator"></div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <!-- about area start -->
+         <div class="tp-about-area pt-140">
             <div class="row justify-content-end">
                <div class="col-lg-6">
                   <div class="tp-about-left pr-90">
@@ -232,7 +378,8 @@
 
                         </p>
                         <p class="pt-10">
-                           Authorized Third Party Agency (TPA) by the Ministry of Skill Development & Entrepreneurship,
+                           Authorized Third Party Agency (TPA) by the Ministry of Skill Development &
+                           Entrepreneurship,
                            playing a key role in implementing the National Apprenticeship Promotion Scheme (NAPS).
 
                         </p>
@@ -276,11 +423,55 @@
                </div>
             </div>
          </div>
-      </div>
-      <!-- about about end-->
+         <!-- about about end-->
 
-      <!-- cta area start -->
-      <div class="tp-cta-area">
+      </div>
+
+      <!-- hero slider start -->
+      <div id="mainImg">
+         <div id="center">
+            <div class="headingmainImg">
+               <h1 class="Assessments">Assessments.</h1>
+               <div class="textmainImg">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quo ipsum accusantium possimus
+                     facilis aliquid saepe ad, perspiciatis modi illo eos doloribus nam. Labore molestias autem
+                     recusandae pariatur, sequi tempora.</p>
+               </div>
+               <h1 class="Skilling">Skilling.</h1>
+               <div class="textmainImg">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus cupiditate molestias
+                     consequuntur
+                     voluptatibus praesentium quibusdam atque architecto ab. Minima, quia harum. Ullam, sit eum.
+                     Saepe,
+                     fugiat, deserunt harum dignissimos laudantium beatae eveniet voluptate repellat doloribus eos
+                     totam, repudiandae perspiciatis nemo autem nostrum aliquam maiores quaerat perferendis assumenda
+                     non amet necessitatibus.</p>
+               </div>
+               <h1 class="Apprenticeships">Apprenticeship.</h1>
+               <div class="textmainImg">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis eos voluptate sit expedita
+                     sapiente itaque accusamus pariatur placeat eius fugit sequi facere labore modi alias nostrum
+                     facilis nisi ullam provident accusantium, consectetur eligendi cupiditate dicta harum ipsa. Est,
+                     quod. Iusto.</p>
+               </div>
+            </div>
+            <div class="imagecontainer">
+               <img src="./assets/img/Edu Images NEw/computer-education.jpg" alt=" skilling">
+            </div>
+            <div class="imagecontainer">
+               <img src="./assets/img/Edu Images NEw/Fashion2.jpg" alt="skilling">
+            </div>
+            <div class="imagecontainer">
+               <img src="./assets/img/Edu Images NEw/sample5.jpg" alt="skilling">
+            </div>
+         </div>
+      </div>
+      <!-- hero slider end  -->
+
+
+
+      <!-- Cards area start -->
+      <!-- <div class="tp-cta-area">
          <div class="container">
             <div class="tp-cta-wrapper pt-50 pb-50" id="our-services">
                <div class="row">
@@ -300,7 +491,8 @@
                      <div class="iq-fancy-box text-left">
                         <img src="https://www.appstarsapplications.com/images/services/icon1.png" alt="#">
                         <h4 class="iq-tw-6">For Universities & Colleges</h4>
-                        <p>We provide the solution wherein we completely automate the examination process based on rules
+                        <p>We provide the solution wherein we completely automate the examination process based on
+                           rules
                            & norms of the university</p>
                         <p>Our solution is capable of providing customized reports & store records on server for any
                            reference in future</p>
@@ -335,7 +527,8 @@
                         <h4 class="iq-tw-6">For Individuals</h4>
                         <p>In today’s competitive world it is important to differentiate yourself with the rest. One
                            effective way of doing that is to acquire additional skills and certify yourself for that
-                           skill. Your skills is what will get you your job or help you move up the ladder in your work.
+                           skill. Your skills is what will get you your job or help you move up the ladder in your
+                           work.
                         </p>
                      </div>
                   </div>
@@ -344,7 +537,8 @@
                         <img src="https://www.appstarsapplications.com/images/services/icon2.png" alt="#">
                         <h4 class="iq-tw-6">Lorem Ipsum</h4>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                           been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                           been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                           a
                            galley of type and scrambled it to make a type specimen book.</p>
                      </div>
                   </div>
@@ -362,154 +556,9 @@
 
             </div>
          </div>
-      </div>
-      <!-- cta end end -->
+      </div> -->
 
-
-      <div class="tp-price-table pt-130" style="display: none;">
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-4 col-md-6">
-                  <div class="price-table__item pt-50 pb-40 pl-40 pr-40 price-border mb-30">
-                     <div class="price-table__top d-flex justify-content-between mb-50">
-                        <span>STARTER PACKAGE</span>
-                        <span><i class="pe-7s-cup"></i></span>
-                     </div>
-                     <div class="price-table__content">
-                        <h2 class="price-table__price mb-15">
-                           $149
-                        </h2>
-                        <h3 class="price-table__title mb-30">
-                           Website Optimization
-                        </h3>
-                        <div class="price-table__list mb-55">
-                           <ul>
-                              <li><span><i class="fal fa-check"></i></span>Maintenance of fences</li>
-                              <li><span><i class="fal fa-check"></i></span>Gate maintenance</li>
-                              <li><span><i class="fal fa-check"></i></span>Video surveillance system support
-                              </li>
-                              <li><span><i class="fal fa-check"></i></span>Configuring access systems</li>
-                              <li class="disabled"><span><i class="fal fa-check"></i></span>Video surveillance
-                                 system support</li>
-                              <li class="disabled"><span><i class="fal fa-check"></i></span>Configuring access
-                                 systems</li>
-                           </ul>
-                        </div>
-                        <a class="tp-purchase-btn" href="#">
-                           Purchase Now <span>
-                              <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                    fill="currentColor"></path>
-                              </svg>
-                              <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                    fill="currentColor"></path>
-                              </svg>
-                           </span>
-                        </a>
-                     </div>
-
-                  </div>
-               </div>
-               <div class="col-xl-4 col-md-6">
-                  <div class="price-table__item pt-50 pb-40 pl-40 pr-40 price-border mb-30">
-                     <div class="price-table__top d-flex justify-content-between mb-50">
-                        <span>UPGRADED PACKAGE</span>
-                        <span><i class="pe-7s-diamond"></i></span>
-                     </div>
-                     <div class="price-table__content">
-                        <h2 class="price-table__price mb-15">
-                           $249
-                        </h2>
-                        <h3 class="price-table__title mb-30">
-                           Website Optimization
-                        </h3>
-                        <div class="price-table__list mb-55">
-                           <ul>
-                              <li><span><i class="fal fa-check"></i></span>Maintenance of fences</li>
-                              <li><span><i class="fal fa-check"></i></span>Gate maintenance</li>
-                              <li><span><i class="fal fa-check"></i></span>Video surveillance system support
-                              </li>
-                              <li><span><i class="fal fa-check"></i></span>Configuring access systems</li>
-                              <li><span><i class="fal fa-check"></i></span>Video surveillance system support
-                              </li>
-                              <li class="disabled"><span><i class="fal fa-check"></i></span>Configuring access
-                                 systems</li>
-                           </ul>
-                        </div>
-                        <a class="tp-purchase-btn" href="#">
-                           Purchase Now <span>
-                              <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                    fill="currentColor"></path>
-                              </svg>
-                              <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                    fill="currentColor"></path>
-                              </svg>
-                           </span>
-                        </a>
-                     </div>
-
-                  </div>
-               </div>
-               <div class="col-xl-4 col-md-6">
-                  <div class="price-table__item pt-50 pb-40 pl-40 pr-40 price-border mb-30">
-                     <div class="price-table__top d-flex justify-content-between mb-50">
-                        <span>FULL PACKAGE</span>
-                        <span><i class="pe-7s-star"></i></span>
-                     </div>
-                     <div class="price-table__content">
-                        <h2 class="price-table__price mb-15">
-                           $349
-                        </h2>
-                        <h3 class="price-table__title mb-30">
-                           Website Optimization
-                        </h3>
-                        <div class="price-table__list mb-55">
-                           <ul>
-                              <li><span><i class="fal fa-check"></i></span>Maintenance of fences</li>
-                              <li><span><i class="fal fa-check"></i></span>Gate maintenance</li>
-                              <li><span><i class="fal fa-check"></i></span>Video surveillance system support
-                              </li>
-                              <li><span><i class="fal fa-check"></i></span>Configuring access systems</li>
-                              <li><span><i class="fal fa-check"></i></span>Video surveillance system support
-                              </li>
-                              <li><span><i class="fal fa-check"></i></span>Configuring access systems</li>
-                           </ul>
-                        </div>
-                        <a class="tp-purchase-btn" href="#">
-                           Purchase Now <span>
-                              <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                    fill="currentColor"></path>
-                              </svg>
-                              <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                    fill="currentColor"></path>
-                              </svg>
-                           </span>
-                        </a>
-                     </div>
-
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-
+      <!-- Cards area ended -->
 
 
       <!-- SSCs slider start  -->
@@ -524,49 +573,78 @@
                      <p>
                         The underlying responsibility of eduvantage is to operationalise the process of onsite
                         assessment of the trainees taking overall care of the process of evaluation.
-                        Our primary goal is to offer scalable, high-quality, and transparent assessments to corporations
+                        Our primary goal is to offer scalable, high-quality, and transparent assessments to
+                        corporations
                         and industries in both manufacturing and service sectors.
                      </p>
                   </div>
 
                   <div class="row justify-content-center align-items-center pt-50">
-                     <div class="col-sm-12 industries">
+                     <div class="col-sm-24 industries">
 
                         <ul class="mailcolumn">
                            <li class="innercolumn">
                               <ul class="indlist ">
-                                 <li class="fntsports wow fadeInUp" data-wow-delay="0.2s">
-                                    <span class="imgicon"></span>
-                                    <a href="fantasy-sports-app-development">
-                                       <strong>Fantasy Sports</strong>
+                                 <li class="edulearn  wow fadeInUp" data-wow-delay="0.2s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/scgj-removebg-preview.png"
+                                       alt="scgj logo">
+                                    <a href="https://sscgj.in/">
+                                       <strong>Green Jobs</strong>
                                     </a>
                                  </li>
-                                 <li class="fdrst wow fadeInUp" data-wow-delay="0.5s">
-                                    <span class="imgicon"></span>
-                                    <a href="food-restaurant-solutions">
-                                       <strong>Food &amp; Restaurant</strong>
+                                 <li class="trvl  wow fadeInUp" data-wow-delay="0.4s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/rasci-removebg-preview.png"
+                                       alt="scgj logo">
+                                    <a href="https://www.rasci.in/">
+                                       <strong>Retail</strong>
+                                    </a>
+                                 </li>
+                                 <li class="agri  wow fadeInUp" data-wow-delay="0.4s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/RCPSDC-removebg-preview.png"
+                                       alt="scgj logo">
+                                    <a href="https://www.rcpsdc.in/">
+                                       <strong>Rubber</strong>
                                     </a>
                                  </li>
                               </ul>
                            </li>
                            <li class="innercolumn">
                               <ul class="indlist ">
-                                 <li class="healthfit  wow fadeInUp" data-wow-delay="0.2s">
-                                    <span class="imgicon"></span>
-                                    <a href="health-care-fitness">
-                                       <strong>Healthcare &amp; Fitness</strong>
+                                 <li class="bnkfinan wow fadeInUp" data-wow-delay="0.2s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/asdc-removebg-preview.png"
+                                       alt="asdc logo">
+                                    <a href="fantasy-sports-app-development">
+                                       <strong>Automotive</strong>
                                     </a>
                                  </li>
-                                 <li class="rlest  wow fadeInUp" data-wow-delay="0.4s">
-                                    <span class="imgicon"></span>
-                                    <a href="real-estate-housing-solutions">
-                                       <strong>Real Estate</strong>
+                                 <li class="sptbet wow fadeInUp" data-wow-delay="0.5s">
+                                    <img src="./assets/img/NoBgSSCLogos/cgsc-removebg-preview.png" alt="">
+                                    <a href="food-restaurant-solutions">
+                                       <strong>Capital Goods</strong>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="innercolumn">
+                              <ul class="indlist ">
+                                 <li class="medenter  wow fadeInUp" data-wow-delay="0.2s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/dwssc-removebg-preview.png" alt="dwssc">
+                                    <a href="http://dwsscindia.com/">
+                                       <strong>Domestic Workers</strong>
+                                    </a>
+                                 </li>
+                                 <li class="agri  wow fadeInUp" data-wow-delay="0.4s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/essi-removebg-preview.png"
+                                       alt="Electronics">
+                                    <a href="https://www.essc-india.org/   ">
+                                       <strong>Electronics</strong>
                                     </a>
                                  </li>
                                  <li class="trvl  wow fadeInUp" data-wow-delay="0.6s">
-                                    <span class="imgicon"></span>
-                                    <a href="travel-leisure-solutions">
-                                       <strong>Travel</strong>
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/ficsi-removebg-preview.png"
+                                       alt="Food SSC">
+                                    <a href="https://www.ficsi.in/">
+                                       <strong>Food</strong>
                                     </a>
                                  </li>
                               </ul>
@@ -574,34 +652,37 @@
                            <li class="innercolumn">
                               <ul class="indlist ">
                                  <li class="trnspt  wow fadeInUp" data-wow-delay="0.2s">
-                                    <span class="imgicon"></span>
-                                    <a href="transportation-logistics-solutions">
-                                       <strong>Transportation</strong>
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/gjsci-removebg-preview.png" alt="gjsci">
+                                    <a href="http://gjsci.org/">
+                                       <strong>Gems & Jewellery</strong>
                                     </a>
                                  </li>
                                  <li class="sptbet  wow fadeInUp" data-wow-delay="0.4s">
-                                    <span class="imgicon"></span>
-                                    <a href="sports-betting-app-development">
-                                       <strong>Sports Batting</strong>
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/mepsc-removebg-preview.png"
+                                       alt="Management SSC">
+                                    <a href="https://www.mepsc.in/">
+                                       <strong>Management</strong>
                                     </a>
                                  </li>
                               </ul>
                            </li>
                            <li class="innercolumn">
                               <ul class="indlist ">
-                                 <li class="edulearn  wow fadeInUp" data-wow-delay="0.2s">
-                                    <span class="imgicon"></span>
-                                    <a href="education-elearning-solutions">
-                                       <strong>Education and E-Learning</strong>
+                                 <li class="agri  wow fadeInUp" data-wow-delay="0.2s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/apparel-removebg-preview.png"
+                                       alt="Apparel SSC">
+                                    <a href="https://sscamh.com/">
+                                       <strong>Apparel</strong>
                                     </a>
                                  </li>
-                                 <li class="ecomretail  wow fadeInUp" data-wow-delay="0.4s">
-                                    <span class="imgicon"></span>
-                                    <a href="retail-ecommerce-solutions">
-                                       <strong>E-Commerce &amp; Retail</strong>
+                                 <li class="trvl  wow fadeInUp" data-wow-delay="0.4s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/iisssc-removebg-preview.png"
+                                       alt="iisssc SSC">
+                                    <a href="https://www.iisssc.org/e-learning/user">
+                                       <strong>Iron Steel</strong>
                                     </a>
                                  </li>
-                                 <li class="bnkfinan  wow fadeInUp" data-wow-delay="0.4s">
+                                 <li class="edulearn  wow fadeInUp" data-wow-delay="0.4s">
                                     <span class="imgicon"></span>
                                     <a href="banking-finance-solutions">
                                        <strong>Banking &amp; Finance</strong>
@@ -612,15 +693,42 @@
                            <li class="innercolumn">
                               <ul class="indlist ">
                                  <li class="medenter  wow fadeInUp" data-wow-delay="0.2s">
-                                    <span class="imgicon"></span>
-                                    <a href="media-entertainment-solutions">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/mesc-removebg-preview.png"
+                                       alt="Media SSC">
+                                    <a href="https://www.mescindia.org/">
                                        <strong>Media &amp; Entertainment</strong>
                                     </a>
                                  </li>
                                  <li class="agri  wow fadeInUp" data-wow-delay="0.4s">
-                                    <span class="imgicon"></span>
-                                    <a href="">
-                                       <strong>Agriculture</strong>
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/iasc-removebg-preview.png"
+                                       alt="Instrumentation SSC">
+                                    <a href="https://iascsectorskillcouncil.in/">
+                                       <strong>Instrumentation</strong>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="innercolumn">
+                              <ul class="indlist ">
+                                 <li class="sptbet  wow fadeInUp" data-wow-delay="0.2s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/tsc-removebg-preview.png"
+                                       alt="Telecom SSC">
+                                    <a href="https://www.tsscindia.com/">
+                                       <strong>Telecom</strong>
+                                    </a>
+                                 </li>
+                                 <li class="edulearn  wow fadeInUp" data-wow-delay="0.4s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/scpwd-removebg-preview.png"
+                                       alt="SCPWD SSC">
+                                    <a href="https://scpwd.in/">
+                                       <strong>PWD</strong>
+                                    </a>
+                                 </li>
+                                 <li class="trvl  wow fadeInUp" data-wow-delay="0.4s">
+                                    <img src="/arvilax/assets/img/NoBgSSCLogos/BWSSC_Logo-removebg-preview (1).png"
+                                       alt="Beauty SSC">
+                                    <a href="https://www.bwssc.in/">
+                                       <strong>Beauty &amp; Wellness</strong>
                                     </a>
                                  </li>
                               </ul>
@@ -634,56 +742,313 @@
             </div>
          </div>
       </div>
+
+
       <!-- SSCs slider end  -->
 
       <!--  NATS And NAPS  start  -->
-      <div class="tp-testimonial-area pb-120" id="our-technology">
+      <div class="tp-testimonial-area pb-40" id="our-technology">
          <div class="container">
             <div class="row">
                <div class="col-lg-10 offset-lg-1 text-center">
 
-                  <div class="tp-section-wrapper text-center">
+                  <div class="tp-section-wrapper text-center ">
                      <span class="tp-section-subtitle mb-30">We help govt achieving the aprenticeship goals</span>
-                     <h2 class="tp-section-title mb-70"> Our NAPS and NATS partners</h2>
+                     <h2 class="tp-section-title mb-70"> 300+ Apprenticeship partners</h2>
                   </div>
 
-                  <div class="row justify-content-center align-items-center">
-                     <div class="col-sm-12 carousel">
-                        <div class="tp-team__social carousel-track">
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/1.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/2.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/3.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/4.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/5.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/6.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/7.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/8.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/9.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/10.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/11.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/12.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/13.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/14.png" style="width:80px;"></a>
-                           <a class="carousel-item" href="#"><img src="assets/img/tech/15.png" style="width:80px;"></a>
+                  <div class="marquee-container">
+                     <div class="marquee-left">
+                        <div class="logo-card">
+                           <img src="assets/img/tech/1.png" alt="Logo 1">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/2.png" alt="Logo 2">|
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/3.png" alt="Logo 3">
+                        </div>
+
+                        <div class="logo-card">
+                           <img src="assets/img/tech/4.png" alt="Logo 4">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/5.png" alt="Logo 5">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/6.png" alt="Logo 6">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/7.png" alt="Logo 7">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/8.png" alt="Logo 8">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/9.png" alt="Logo 9">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/10.png" alt="Logo 10">
+                        </div>
+
+                        <div class="logo-card">
+                           <img src="assets/img/tech/1.png" alt="Logo 1">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/2.png" alt="Logo 2">|
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/3.png" alt="Logo 3">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/4.png" alt="Logo 4">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/5.png" alt="Logo 5">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/6.png" alt="Logo 6">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/7.png" alt="Logo 7">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/8.png" alt="Logo 8">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/9.png" alt="Logo 9">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/10.png" alt="Logo 10">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/1.png" alt="Logo 1">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/2.png" alt="Logo 2">|
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/3.png" alt="Logo 3">
+                        </div>
+
+                        <div class="logo-card">
+                           <img src="assets/img/tech/4.png" alt="Logo 4">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/5.png" alt="Logo 5">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/6.png" alt="Logo 6">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/7.png" alt="Logo 7">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/8.png" alt="Logo 8">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/9.png" alt="Logo 9">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/10.png" alt="Logo 10">
                         </div>
                      </div>
                   </div>
 
-                  <div class="postbox__read-more pt-20">
-                     <a class="tp-btn-border" href="#">Request Pricing<span>
-                           <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                 d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                 fill="currentColor"></path>
-                           </svg>
-                           <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                 d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                 fill="currentColor"></path>
-                           </svg>
-                        </span></a>
+                  <div class="marquee-container">
+                     <div class="marquee-right">
+                        <div class="logo-card">
+                           <img src="assets/img/tech/11.png" alt="Logo 11">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/12.png" alt="Logo 12">|
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/13.png" alt="Logo 13">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/14.png" alt="Logo 14">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/15.png" alt="Logo 15">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/16.png" alt="Logo 16">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/17.png" alt="Logo 17">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/18.png" alt="Logo 18">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/19.png" alt="Logo 19">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/20.png" alt="Logo 20">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/11.png" alt="Logo 11">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/12.png" alt="Logo 12">|
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/13.png" alt="Logo 13">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/14.png" alt="Logo 14">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/15.png" alt="Logo 15">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/16.png" alt="Logo 16">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/17.png" alt="Logo 17">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/18.png" alt="Logo 18">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/19.png" alt="Logo 19">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/20.png" alt="Logo 20">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/11.png" alt="Logo 11">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/12.png" alt="Logo 12">|
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/13.png" alt="Logo 13">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/14.png" alt="Logo 14">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/15.png" alt="Logo 15">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/16.png" alt="Logo 16">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/17.png" alt="Logo 17">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/18.png" alt="Logo 18">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/19.png" alt="Logo 19">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/20.png" alt="Logo 20">
+                        </div>
+                     </div>
                   </div>
 
+                  <div class="marquee-container">
+                     <div class="marquee-left">
+                        <div class="logo-card">
+                           <img src="assets/img/tech/31.png" alt="Logo 31">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/22.png" alt="Logo 2">|
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/23.png" alt="Logo 3">
+                        </div>
+
+                        <div class="logo-card">
+                           <img src="assets/img/tech/24.png" alt="Logo 4">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/25.png" alt="Logo 5">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/26.png" alt="Logo 6">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/27.png" alt="Logo 7">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/28.png" alt="Logo 8">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/29.png" alt="Logo 9">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/30.png" alt="Logo 10">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/31.png" alt="Logo 31">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/22.png" alt="Logo 2">|
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/23.png" alt="Logo 3">
+                        </div>
+
+                        <div class="logo-card">
+                           <img src="assets/img/tech/24.png" alt="Logo 4">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/25.png" alt="Logo 5">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/26.png" alt="Logo 6">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/27.png" alt="Logo 7">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/28.png" alt="Logo 8">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/29.png" alt="Logo 9">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/30.png" alt="Logo 10">
+                        </div>
+
+                        <div class="logo-card">
+                           <img src="assets/img/tech/31.png" alt="Logo 1">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/22.png" alt="Logo 2">|
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/23.png" alt="Logo 3">
+                        </div>
+
+                        <div class="logo-card">
+                           <img src="assets/img/tech/24.png" alt="Logo 4">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/25.png" alt="Logo 5">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/26.png" alt="Logo 6">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/27.png" alt="Logo 7">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/28.png" alt="Logo 8">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/29.png" alt="Logo 9">
+                        </div>
+                        <div class="logo-card">
+                           <img src="assets/img/tech/30.png" alt="Logo 10">
+                        </div>
+
+                     </div>
+                  </div>
 
 
                </div>
@@ -692,101 +1057,379 @@
       </div>
       <!-- NATS And NAPS slider end  -->
 
-      <!-- Govt Client slider end  --><!-- Govt Client end  -->
-      <div class="tp-testimonial-area pb-120" id="our-technology">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-10 offset-lg-1 text-center">
+      <!-- Govt Client section start  -->
 
-                  <div class="tp-section-wrapper text-center">
-                     <span class="tp-section-subtitle mb-30">We help govt achieving the aprenticeship
-                        goals</span>
-                     <h2 class="tp-section-title mb-70"> Our NAPS and NATS partners</h2>
-                  </div>
-                  <div class="container swiper">
-                     <div class="slider-wrapper">
-                        <div class="card-list swiper-wrapper">
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/1.png" alt="company image" class="company-image">
-                              <h2 class=" company-name">Fiem</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/2.png" alt="company image" class="company-image">
-                              <h2 class=" company-name">Signet Group</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/3.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Shiroki</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/4.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Maithan Steel</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/5.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Excide</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/6.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Supreme</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/7.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Maharaja Agrasen</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/8.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Jns</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/9.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Daikin</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/10.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Bajaj</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/11.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Ultratech</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/12.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Keventers</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/13.png" alt="company image" class="company-image">
-                              <h2 class="company-name">Surya Cement</h2>
-                           </div>
-                           <div class="card-item swiper-slide">
-                              <img src="assets/img/tech/14.png" alt="company image" class="company-image">
-                              <h2 class="company-name">TPCL Pakaging</h2>
-                           </div>
-                        </div>
 
-                     </div>
-
-                     <!-- If we need pagination -->
-                     <div class="swiper-pagination"></div>
-
-                     <!-- If we need navigation buttons -->
-                     <div class="swiper-slide-button swiper-button-prev"></div>
-                     <div class="swiper-slide-button swiper-button-next"></div>
-                  </div>
+      <div id="page2a">
+         <div class="buiness-numbers-section">
+            <div class="buiness-numbers-left-section">
+               <h1>Success Stories <br>Shaped by Our <br> User Experience</h1>
+            </div>
+            <div class="buiness-numbers-right-section">
+               <div class="content-block">
+                  <h4>PARTNERSHIP MENTALITY</h4>
+                  <p>Along with taking the lead in designing AI-powered solutions, we embody a partnership mentality.
+                     This exact commitment has been the bedrock of our clients’ successes. When you choose to
+                     collaborate with us, we promise to be right where your audience's changing desires meet your
+                     ambitious business goals. We don't settle for mediocrity; we strive for excellence in every
+                     Figma
+                     pixel, every touchpoint, and every UX interaction.</p>
+               </div>
+               <div class="content-block">
+                  <h4>RESULTS</h4>
+                  <p>That is how we've built 50+ sustainable startup products and helped 400+ brands secure millions
+                     in
+                     funding, achieve successful acquisitions, and establish themselves as globally recognized
+                     companies.</p>
                </div>
             </div>
          </div>
+
+         <!-- <div class=".stats-grid"> -->
+
+         <div class="stats-grid-1">
+            <div class="stat-box">
+               <h2>$500M</h2>
+               <p>In funding secured owing to our designs</p>
+               <span>/001</span>
+            </div>
+            <div class="stat-box">
+               <h2>+1 million</h2>
+               <p>Increase in customer base</p>
+               <span>/002</span>
+
+            </div>
+            <div class="stat-box">
+               <h2>1 000 000+</h2>
+               <p>Of active marketplace users</p>
+               <span>/003</span>
+            </div>
+         </div>
+         <div class="stats-grid-2">
+            <div class="stat-box">
+               <h2>25 million</h2>
+               <p>Monthly E-commerce visits</p>
+               <span>/004</span>
+            </div>
+            <div class="stat-box">
+               <h2>+300%</h2>
+               <p>Increase in sign-up conversion rate</p>
+               <span>/005</span>
+            </div>
+         </div>
+         <!-- </div> -->
+      </div>
+
+      </div>
+
+      <div id="page3">
+         <div class="tp-section-wrapper text-center">
+            <span class="tp-section-subtitle mb-30">We help govt achieving the skilling and apprenticeship
+               goals</span>
+            <h2 class="tp-section-title mb-70"> Our Government Affiliations</h2>
+         </div>
+         <div id="Govt-Client-container">
+
+            <div id="Govt-Client-1" class="Govt-Client" src="assets/img/logo/MSDE.jpg">
+               <div class="overlay"></div>
+               <h2>Ministry Of Skill Development and Entrepreneurship</h2>
+               <p class="hidden-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab
+                  repudiandae officia corrupti
+                  alias
+                  voluptatum vero itaque. Nemo, id. A totam tempore blanditiis commodi error quos sit sapiente!
+                  Dignissimos, fugiat!</p>
+            </div>
+
+            <div id="Govt-Client-2" class="Govt-Client" src="assets/img/logo/NSDC.png">
+               <div class="overlay"></div>
+               <h2>National Skill Development Council</h2>
+               <p class="hidden-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab
+                  repudiandae officia corrupti
+                  alias
+                  voluptatum vero itaque. Nemo, id. A totam tempore blanditiis commodi error quos sit sapiente!
+                  Dignissimos, fugiat!</p>
+            </div>
+
+            <div id="Govt-Client-3" class="Govt-Client"
+               src="assets/img/logo/national-council-for-vocational-education-and-training-logo.jpg">
+               <div class="overlay"></div>
+               <h2>National Council Of Vocational Education And Trainings</h2>
+               <p class="hidden-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab
+                  repudiandae officia corrupti
+                  alias
+                  voluptatum vero itaque. Nemo, id. A totam tempore blanditiis commodi error quos sit sapiente!
+                  Dignissimos, fugiat!</p>
+            </div>
+
+            <div id="Govt-Client-4" class="Govt-Client" src="assets/img/logo/dgt-logo.jpg">
+               <div class="overlay"></div>
+               <h2>Directorate General Of Trainings</h2>
+               <p class="hidden-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab
+                  repudiandae officia corrupti
+                  alias
+                  voluptatum vero itaque. Nemo, id. A totam tempore blanditiis commodi error quos sit sapiente!
+                  Dignissimos, fugiat!</p>
+            </div>
+
+            <div id="Govt-Client-5" class="Govt-Client" src="assets/img/logo/MSSDM.png">
+               <div class="overlay"></div>
+               <h2>Maharastra Skill Development Society</h2>
+               <p class="hidden-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab
+                  repudiandae officia corrupti
+                  alias
+                  voluptatum vero itaque. Nemo, id. A totam tempore blanditiis commodi error quos sit sapiente!
+                  Dignissimos, fugiat!</p>
+            </div>
+
+            <div id="Govt-Client-6" class="Govt-Client" src="assets/img/logo/ksdc-logo-3.png">
+               <div class="overlay"></div>
+               <h2>Karnataka Skill Development Mission</h2>
+               <p class="hidden-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab
+                  repudiandae officia corrupti
+                  alias
+                  voluptatum vero itaque. Nemo, id. A totam tempore blanditiis commodi error quos sit sapiente!
+                  Dignissimos, fugiat!</p>
+            </div>
+
+            <div id="Govt-Client-7" class="Govt-Client" src="assets/img/logo/UPSDM-Logo.png">
+               <div class="overlay"></div>
+               <h2>Uttar Pradesh Skill Development Mission</h2>
+               <p class="hidden-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab
+                  repudiandae officia corrupti
+                  alias
+                  voluptatum vero itaque. Nemo, id. A totam tempore blanditiis commodi error quos sit sapiente!
+                  Dignissimos, fugiat!</p>
+            </div>
+
+         </div>
+
+      </div>
+
+      <div id="page4">
+         <div class="yt-vedio-section">
+            <div class="sec-left">
+               <h2>Learn More<br>About Us</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt praesentium nulla dolores
+                  magnam? Nihil facere officia perspiciatis! Non exercitationem officia molestiae debitis, delectus
+                  quasi.
+               </p>
+            </div>
+            <div class="sec-right">
+
+               <div class="video-container">
+
+                  <div class="video-wrapper">
+
+                     <div class="v-iframe">
+                        <iframe src="https://www.youtube.com/embed/BVbVmdaTdro?si=NHZSW2qKkSjRKA-T"
+                           title="YouTube video 1" frameborder="0"
+                           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                     </div>
+
+                  </div>
+
+                  <div class="video-wrapper">
+                     <div class="v-iframe">
+                        <iframe src="https://www.youtube.com/embed/BVbVmdaTdro?si=NHZSW2qKkSjRKA-T"
+                           title="YouTube video 1" frameborder="0"
+                           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                     </div>
+
+                  </div>
+
+                  <div class="video-wrapper">
+                     <div class="v-iframe">
+                        <iframe src="https://www.youtube.com/embed/BVbVmdaTdro?si=NHZSW2qKkSjRKA-T"
+                           title="YouTube video 1" frameborder="0"
+                           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+         </div>
+
+      </div>
+
+      <div id="page5">
+         <div class="tp-section-wrapper text-center">
+            <span class="tp-section-subtitle mb-30">Explore Our Latest Insights and Updates</span>
+            <h2 class="tp-section-title mb-70">Latest News And Blogs</h2>
+         </div>
+         <div class="blogs-section-container-1">
+            <div class="blog-item">
+               <div class="card">
+                  <div class="card-front">
+                     <div class="card-content">
+                        <h2 class="card-title">ESG measurement and reporting – from compliance to accelerating
+                           sustainability</h2>
+                        <p class="card-description">
+                           Companies now face a rapidly evolving ESG regulatory landscape. We have identified nine
+                           capabilities that can move organizations beyond mere compliance and help accelerate their
+                           sustainability journey for competitive advantage.
+                        </p>
+                        <a href="#" class="expand-link">Expand &nbsp; &#8250;</a>
+                     </div>
+                  </div>
+                  <div class="card-back">
+
+                     <img src="/arvilax/assets/img/gallery/gallery-10.jpg" alt="Card image" class="card-image">
+                     <div class="card-content">
+                        <!-- <a href="#" class="expand-link">Expand &nbsp; &#8250;</a> -->
+                        <h3 class="card-header">RESEARCH REPORT 1</h3>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <div class="blog-item">
+               <div class="card">
+                  <div class="card-front">
+                     <div class="card-content">
+                        <h2 class="card-title">ESG measurement and reporting – from compliance to accelerating
+                           sustainability</h2>
+                        <p class="card-description">
+                           Companies now face a rapidly evolving ESG regulatory landscape. We have identified nine
+                           capabilities that can move organizations beyond mere compliance and help accelerate their
+                           sustainability journey for competitive advantage.
+                        </p>
+                        <a href="#" class="expand-link">Expand &nbsp; &#8250;</a>
+                     </div>
+                  </div>
+                  <div class="card-back">
+
+                     <img src="/arvilax/assets/img/gallery/gallery-2.jpg" alt="Card image" class="card-image">
+                     <div class="card-content">
+                        <!-- <a href="#" class="expand-link">Expand &nbsp; &#8250;</a> -->
+                        <h3 class="card-header">RESEARCH REPORT 1</h3>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <div class="blog-item">
+               <div class="card">
+                  <div class="card-front">
+                     <div class="card-content">
+                        <h2 class="card-title">ESG measurement and reporting – from compliance to accelerating
+                           sustainability</h2>
+                        <p class="card-description">
+                           Companies now face a rapidly evolving ESG regulatory landscape. We have identified nine
+                           capabilities that can move organizations beyond mere compliance and help accelerate their
+                           sustainability journey for competitive advantage.
+                        </p>
+                        <a href="#" class="expand-link">Expand &nbsp; &#8250;</a>
+                     </div>
+                  </div>
+                  <div class="card-back">
+
+                     <img src="/arvilax/assets/img/gallery/gallery-5.jpg" alt="Card image" class="card-image">
+                     <div class="card-content">
+                        <!-- <a href="#" class="expand-link">Expand &nbsp; &#8250;</a> -->
+                        <h3 class="card-header">RESEARCH REPORT 1</h3>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="blogs-section-container-2">
+            <div class="blog-item">
+               <div class="card">
+                  <div class="card-front">
+                     <div class="card-content">
+                        <h2 class="card-title">ESG measurement and reporting – from compliance to accelerating
+                           sustainability</h2>
+                        <p class="card-description">
+                           Companies now face a rapidly evolving ESG regulatory landscape. We have identified nine
+                           capabilities that can move organizations beyond mere compliance and help accelerate their
+                           sustainability journey for competitive advantage.
+                        </p>
+                        <a href="#" class="expand-link">Expand &nbsp; &#8250;</a>
+                     </div>
+                  </div>
+                  <div class="card-back">
+
+                     <img src="/arvilax/assets/img/gallery/gallery-4.jpg" alt="Card image" class="card-image">
+                     <div class="card-content">
+                        <!-- <a href="#" class="expand-link">Expand &nbsp; &#8250;</a> -->
+                        <h3 class="card-header">RESEARCH REPORT 1</h3>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <div class="blog-item">
+               <div class="card">
+                  <div class="card-front">
+                     <div class="card-content">
+                        <h2 class="card-title">ESG measurement and reporting – from compliance to accelerating
+                           sustainability</h2>
+                        <p class="card-description">
+                           Companies now face a rapidly evolving ESG regulatory landscape. We have identified nine
+                           capabilities that can move organizations beyond mere compliance and help accelerate their
+                           sustainability journey for competitive advantage.
+                        </p>
+                        <a href="#" class="expand-link">Expand &nbsp; &#8250;</a>
+                     </div>
+                  </div>
+                  <div class="card-back">
+
+                     <img src="/arvilax/assets/img/gallery/gallery-6.jpg" alt="Card image" class="card-image">
+                     <div class="card-content">
+                        <!-- <a href="#" class="expand-link">Expand &nbsp; &#8250;</a> -->
+                        <h3 class="card-header">RESEARCH REPORT 1</h3>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <div class="blog-item">
+               <div class="card">
+                  <div class="card-front">
+                     <div class="card-content">
+                        <h2 class="card-title">ESG measurement and reporting – from compliance to accelerating
+                           sustainability</h2>
+                        <p class="card-description">
+                           Companies now face a rapidly evolving ESG regulatory landscape. We have identified nine
+                           capabilities that can move organizations beyond mere compliance and help accelerate their
+                           sustainability journey for competitive advantage.
+                        </p>
+                        <a href="#" class="expand-link">Expand &nbsp; &#8250;</a>
+                     </div>
+                  </div>
+                  <div class="card-back">
+
+                     <img src="/arvilax/assets/img/gallery/gallery-9.png" alt="Card image" class="card-image">
+                     <div class="card-content">
+                        <!-- <a href="#" class="expand-link">Expand &nbsp; &#8250;</a> -->
+                        <h3 class="card-header">RESEARCH REPORT 1</h3>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
       </div>
 
 
+      <!-- Govt Client section end  -->
+
       <!-- lasted blog start  -->
-      <div class="tp-lasted-blog pt-0">
+      <!-- <div class="tp-lasted-blog pt-0">
          <div class="container">
             <div class="row">
                <div class="col-12">
                   <div class="tp-section-wrapper text-center">
                      <span class="tp-section-subtitle mb-30">Our Latest News & Blog</span>
-                     <h2 class="tp-section-title mb-70">Stay updated with our <br> latest posts</h2>
+                     <h2 class="tp-section-title mb-70">Stay updated with our <br> latest posts
+                     </h2>
                   </div>
                </div>
             </div>
@@ -801,7 +1444,8 @@
                         <span> <a href="#">BUsiness</a> /</span>
                         <span> <a href="#">23.06.2022</a></span>
                      </div>
-                     <h3 class="tp-blog__title"><a href="#">How To Build Rapport With Your Web Design
+                     <h3 class="tp-blog__title"><a href="#">How To Build Rapport With Your Web
+                           Design
                            Clients</a>
                      </h3>
                      <a class="tp-btn-sm-black" href="#">
@@ -831,7 +1475,8 @@
                         <span> <a href="#">BUsiness</a> /</span>
                         <span> <a href="#">23.06.2022</a></span>
                      </div>
-                     <h3 class="tp-blog__title"><a href="#">How We Improved Our Core Web Vitals (Case
+                     <h3 class="tp-blog__title"><a href="#">How We Improved Our Core Web Vitals
+                           (Case
                            Study)</a></h3>
                      <a class="tp-btn-sm-black" href="#">
                         <span>
@@ -860,7 +1505,8 @@
                         <span> <a href="#">BUsiness</a> /</span>
                         <span> <a href="#">23.06.2022</a></span>
                      </div>
-                     <h3 class="tp-blog__title"><a href="#">How To Develop Your Business’ Technology
+                     <h3 class="tp-blog__title"><a href="#">How To Develop Your Business’
+                           Technology
                            Roadmap</a></h3>
                      <a class="tp-btn-sm-black" href="#">
                         <span>
@@ -881,149 +1527,127 @@
                </div>
             </div>
          </div>
-      </div>
+      </div> -->
       <!-- lasted blog end  -->
 
+
+      <!-- Footer New -->
    </main>
 
-   <!-- footer area start -->
    <footer>
-      <div class="tp-footer__area black-bg">
-         <div class="tp-footer">
-
-            <!-- footer top -->
-            <div class="tp-footer__top pt-90 pb-60">
-               <div class="container">
-                  <div class="row align-items-center">
-                     <div class="col-lg-5">
-                        <h3 class="tp-footer__top-title">Have a project in mind?
-                           Let’s work together.</h3>
-                     </div>
-                     <div class="col-lg-7">
-                        <div class="tp-insta d-flex justify-content-lg-end">
-                           <div class="tp-insta__item p-relative ml-20">
-                              <img src="assets/img/footer/footer-sm-1.jpg" alt="">
-                              <a href="#"><i class="fab fa-instagram"></i></a>
-                           </div>
-                           <div class="tp-insta__item p-relative ml-20">
-                              <img src="assets/img/footer/footer-sm-2.jpg" alt="">
-                              <a href="#"><i class="fab fa-instagram"></i></a>
-                           </div>
-                           <div class="tp-insta__item p-relative ml-20">
-                              <img src="assets/img/footer/footer-sm-3.jpg" alt="">
-                              <a href="#"><i class="fab fa-instagram"></i></a>
-                           </div>
-                           <div class="tp-insta__item p-relative ml-20">
-                              <img src="assets/img/footer/footer-sm-4.jpg" alt="">
-                              <a href="#"><i class="fab fa-instagram"></i></a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+      <div class="footer-container">
+         <div class="left-section">
+            <h1>Want to hire skilled <br />Employees?<br />Contact Us!</h1>
+            <div class="footer-links">
+               <div class="footer-column">
+                  <h3>OUR SERVICES:</h3>
+                  <ul>
+                     <li>Asessments</li>
+                     <li>Hirings</li>
+                     <li>Placements</li>
+                     <li>Skilling</li>
+                  </ul>
+               </div>
+               <div class="footer-column">
+                  <h3>OUR LOCATIONS:</h3>
+                  <ul>
+                     <li>Delhi</li>
+                     <li>Noida</li>
+                     <li>Chennai</li>
+                  </ul>
+               </div>
+               <div class="footer-column">
+                  <h3>Contact Details:</h3>
+                  <ul>
+                     <li>+91 11 4054 1330</li>
+                     <li>admin@eduvantage.in</li>
+                  </ul>
                </div>
             </div>
-            <!-- footer top end  -->
-
-
-            <!-- main-footer start  -->
-            <div class="tp-footer__main">
-               <div class="container">
-                  <div class="tp-footer-border pt-60 pb-30">
-                     <div class="row">
-
-                        <div class="col-lg-3 col-md-6">
-                           <div class="tp-footer__widget pb-30">
-                              <h3 class="tp-footer__widget-title">Our Service</h3>
-                              <ul>
-                                 <li><a href="#">Tax strategy</a></li>
-                                 <li><a href="#">Financial advices</a></li>
-                                 <li><a href="#">Insurance strategy</a></li>
-                                 <li><a href="#">Manage investment</a></li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                           <div class="tp-footer__widget  pb-30">
-                              <h3 class="tp-footer__widget-title">Our Locations</h3>
-                              <ul>
-                                 <li><a href="#">Delhi</a></li>
-                                 <li><a href="#">Noida</a></li>
-
-                              </ul>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                           <div class="tp-footer__widget  pb-30">
-                              <h3 class="tp-footer__widget-title">Contact Us</h3>
-                              <ul>
-                                 <li><a href="tel:+91 00000 00000"> Mobile : +91 11 4054 1330​</a></li>
-                                 <li><a href="mailto:support@example.com"> Mail : admin@eduvantage.in</a></li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                           <div class="tp-footer__widget  pb-30">
-
-                              <a href="#">
-                                 <div class="tp-theme-btn d-flex align-items-center white-bg">
-                                    <div class="tp-btn-inner">
-                                       <p class="mb-0">Let’t Talk</p>
-                                       <b>Get in Touch</b>
-                                       <span class="d-inline-block">
-                                          <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                             <path
-                                                d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
-                                                fill="currentColor" />
-                                          </svg>
-                                          <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                             <path
-                                                d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
-                                                fill="currentColor" />
-                                          </svg>
-                                       </span>
-                                    </div>
-                                 </div>
-                              </a>
-
-                           </div>
-                        </div>
-
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- main footer end  -->
          </div>
-      </div>
 
+         <div class="right-section">
+            <div class="location">
+               <p>OUR LOCATION:</p>
+               <span>Eduvantage Private Limited <br />
+                  1020-1023, 10th Floor, Devika Tower, Nehru Place, New Delhi-110019</span>
+            </div>
+            <div class="social-links">
+               <p>OUR SOCIAL PRESENCE:</p>
+               <div class="footer-social-buttons"><a href="#"><i class="fab fa-linkedin"> </i> LinkedIn</a></div>
+               <div class="footer-social-buttons"><a href="#"><i class="fab fa-facebook"></i> Facebook</a></div>
+               <div class="footer-social-buttons"><a href="#"><i class="fab fa-instagram"></i> Instagram</a></div>
+               <div class="footer-social-buttons"><a href="#"><i class="fab fa-youtube"></i> Youtube</a></div>
+            </div>
+            <div class="get-in-touch-button">
+               <div class="col-lg-3 col-md-6">
+                  <div class="tp-footer__widget  pb-0">
+
+                     <a href="#">
+                        <div class="tp-theme-btn d-flex align-items-center white-bg">
+                           <div class="tp-btn-inner">
+                              <p class="mb-0">Let’t Talk</p>
+                              <b>Get in Touch</b>
+                              <span class="d-inline-block">
+                                 <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
+                                       fill="currentColor" />
+                                 </svg>
+                                 <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
+                                       fill="currentColor" />
+                                 </svg>
+                              </span>
+                           </div>
+                        </div>
+                     </a>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- <div class="row black-bg">
+            <div class="col-md-8 col-0">
+               <div class="tp-copyrigh-text mb-0">
+                  <span>© 2024 Eduvantage - Assessments/Apprenticeship . All Rights Reserved.</span>
+               </div>
+            </div>
+            <div class="col-md-4 col-12">
+               <div class="tp-footer-social-icon mb-15 text-md-end">
+                  <ul>
+                     <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                     <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                     <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div> -->
+      </div>
       <!-- footer copy right -->
-      <div class="top-footer-copyright pt-30 black-bg">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-8 col-12">
-                  <div class="tp-copyrigh-text mb-30">
-                     <span>© 2024 Eduvantage - Assessments/Apprenticeship . All Rights Reserved.</span>
-                  </div>
-               </div>
-               <div class="col-md-4 col-12">
-                  <div class="tp-footer-social-icon mb-30 text-md-end">
-                     <ul>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
+      <div class="footer-bottom">
+         <p>Eduvantage Assessment Agency.</p>
+         <p>© 2024 All Rights Reserved</p>
       </div>
+      <!-- <div class="top-footer-copyright pt-15 black-bg">
+         <div class="container"> -->
+
+      <!-- </div>
+      <!-- </div> -->
       <!-- footer copyright end  -->
    </footer>
-   <!-- footer area end -->
+
+
+
+
+
+
 
 
    <!-- JS here -->
@@ -1045,11 +1669,36 @@
    <script src="assets/js/main.js"></script>
    <script src="assets/js/highlight.js"></script>
 
+   <!-- Linking LocomotiveJS -->
+   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+   <!-- Linking gsap script -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <!-- Linking GSAP Scroll triger -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script src="assets/js/gsapScript.js"></script>
+   <script>
+      // Your GSAP animation code
+      gsap.to("#one", {
+         width: "100%",
+         ease: "expo.inOut",
+         duration: 10
+      });
+   </script>
+
+
    <!-- Linking Swiper script -->
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
    <!-- Linking custom script -->
    <script src="assets/js/swiper.js"></script>
+
 </body>
 
 </html>

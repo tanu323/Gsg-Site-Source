@@ -22,20 +22,16 @@
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Linking Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
 </head>
 
 <body>
     <!-- pre loader area start -->
-    <div id="loading">
-        <div id="loading-center">
-            <div id="loading-center-absolute">
-                <!-- loading content here -->
-            </div>
-        </div>
-    </div>
     <!-- pre loader area end -->
 
-    <header>
+    <!-- <header>
         <div id="header-sticky" class="header__area header__transparent pr-90 pl-90 header-sticky-active">
 
             <div class="header__main" id="header-sticky">
@@ -141,10 +137,10 @@
             </div>
 
         </div>
-    </header>
+    </header> -->
 
     <!-- offcanvas area -->
-    <div class="offcanvas__area off-canvas-bg" data-background="assets/img//bg/Sidearea-bg-img.png">
+    <!-- <div class="offcanvas__area off-canvas-bg" data-background="assets/img//bg/Sidearea-bg-img.png">
         <div class="offcanvas_area-logo">
             <span class="offcanvas__close-btn"><a href="javascript:void(0)"><i class="fal fa-times"></i></a></span>
         </div>
@@ -190,9 +186,9 @@
             </ul>
         </div>
     </div>
-    <div class="body-overlay"></div>
+    <div class="body-overlay"></div> -->
 
-    <div class="offcanvas__area off-canvas-bg" data-background="assets/img//bg/Sidearea-bg-img.png">
+    <!-- <div class="offcanvas__area off-canvas-bg" data-background="assets/img//bg/Sidearea-bg-img.png">
         <div class="offcanvas_area-logo">
             <span class="offcanvas__close-btn"><a href="javascript:void(0)"><i class="fal fa-times"></i></a></span>
         </div>
@@ -238,56 +234,80 @@
             </ul>
         </div>
     </div>
-    <div class="body-overlay"></div>
+    <div class="body-overlay"></div> -->
 
     <section class="content">
         <div class="sales-support">
             <div class="talk-to-sales">
-                <img src="assets/img/contactUs/contact_3-removebg.png" alt="Chat Icon">
-                <h2>Talk to Us</h2>
-                <p>Chat with our product specialists for more information about features, sizing, support, and
-                    consulting.</p>
-                <button class="chat-now">Chat Now</button>
+                <img src=" /arvilax//assets/img/logo/logoNoBg.png" alt="edulogo" style="height: 85px; width:90px">
+                <div class=" socialmedia_item">
+                    <div class="socialmedia_icon">
+                        <i class="ri-mail-line"></i>
+                    </div>
+                    <span>admin@eduvantage.in</span>
+                </div>
+                <div class="socialmedia_item">
+                    <div class="socialmedia_icon">
+                        <i class="ri-phone-line"></i>
+                    </div>
+                    <span>+91 11 4054 1330​</span>
+                </div>
+                <div class="socialmedia_item">
+                    <div class="socialmedia_icon">
+                        <i class="ri-linkedin-box-line"></i>
+                    </div>
+                    <span>LinkedIn</span>
+                </div>
+                <div class="socialmedia_item">
+                    <div class="socialmedia_icon">
+                        <i class="ri-facebook-circle-line"></i>
+                    </div>
+                    <span>Facebook</span>
+                </div>
+                <div class="socialmedia_item">
+                    <div class="socialmedia_icon">
+                        <i class="ri-instagram-line"></i>
+                    </div>
+                    <span>Instagram</span>
+                </div>
             </div>
 
-            <div class="connect-with-sales">
+            <div class="connect-with-edu">
                 <h2>Connect with Eduvantage</h2>
                 <p>Please let us know how we can help and our team will get back to you as soon as possible.</p>
-                <form>
+                <form id="contact-form">
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Email" required>
-                        <div class="name-fields">
-                            <div>
-                                <label for="first-name">First Name</label>
-                                <input type="text" id="first-name" placeholder="First Name" required>
-                            </div>
-                            <div>
-                                <label for="last-name">Last Name</label>
-                                <input type="text" id="last-name" placeholder="Last Name" required>
-                            </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
                         </div>
                         <div class="name-fields">
+                            <div>
+                                <label for="first-name">Name</label>
+                                <input type="text" id="firstname" required>
+                            </div>
                             <div>
                                 <label for="company">Company</label>
-                                <input type="text" id="company" placeholder="Company" required>
+                                <input type="text" id="company" required>
                             </div>
                             <div>
-                                <label for="business-phone">Business Phone</label>
-                                <input type="tel" id="business-phone" placeholder="Business Phone" required>
+                                <label for="business-phone">Phone</label>
+                                <input type="tel" id="businessPhone" required>
                             </div>
                         </div>
+                        <div>
+                            <label for="message">Tell us more about how we can help</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Tell us more about how we can help</label>
-                        <textarea id="message" placeholder="Tell us more about how we can help" rows="5"
-                            required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Submit</button>
                 </form>
             </div>
         </div>
     </section>
+    <script src="assets/js/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/submit-email.js" type="module"></script>
 
 
 
