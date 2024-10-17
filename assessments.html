@@ -4,15 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Website</title>
+    <title>Eduvantage</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/Favicon-Eduvantage.png">
 
     <!-- Linking swiper js here -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Linking Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Linking Locomotive CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" rel="stylesheet" />
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -31,10 +37,13 @@
 
 <body>
     <!-- pre loader area start -->
+
+    <div id="Govt-Clients"></div>
+    <!-- pre loader area start -->
     <div id="loading">
         <div id="loading-center">
             <div id="loading-center-absolute">
-                <!-- loading content here -->
+                loading content here
             </div>
         </div>
     </div>
@@ -46,1071 +55,529 @@
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
-    <!-- back to top end -->
 
-    <!-- <div class="mouseCursor cursor-outer"></div>
-   <div class="mouseCursor cursor-inner"><span>Drag</span></div> -->
+    <header class="header">
+        <nav class="nav navContainer">
+            <a href="index.html" class="nav__logo">
+                <img src="./assets//img/logo/logoNoBg.png" alt="edulogo">
+            </a>
+            <div class="nav_toggle" id="nav_toggle">
+                <i class="ri-menu-line nav_toggle-menu"></i>
+                <i class="ri-close-circle-line nav_toggle-close"></i>
 
-    <!-- header area start -->
+            </div>
 
+            <div class="nav_menu" id="nav_menu">
+                <ul class="nav_list">
 
-    <header>
-        <div id="header-sticky" class="header__area header__transparent pr-90 pl-90 header-sticky-active">
-
-            <div class="header__main" id="header-sticky">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-2 col-md-4 col-7">
-
-                            <div class="logo">
-                                <a href="#">
-                                    <img src="assets/img/logo/logo.png" alt="logo" class="m-none">
-                                    <img src="assets/img/logo/logo.png" alt="logo" class="w-none">
-                                </a>
-                            </div>
+                    <li>
+                        <div class="nav-link">
+                            <a href="index.html" onclick="setActiveLink(event)">Home</a>
                         </div>
-                        <div class=" col-lg-9 col-md-4 d-none d-md-block">
-                            <div class="main-menu text-center">
-                                <nav id="mobile-menu">
-                                    <ul class="navbar">
-                                        <li><a href="index.html" class="menu-link nav-link">Home</a></li>
-                                        <li><a href="aboutUs.html" class="menu-link nav-link">About Us</a></li>
-                                        <li
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1872">
-                                            <a href="assessments.html" class="menu-link nav-link">Assessments</a>
-                                            <button class="ast-menu-toggle" aria-expanded="false">
-                                                <span class="ast-icon icon-arrow"></span>
-                                            </button>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item"><a href="universities.html"
-                                                        class="menu-link nav-link">For
-                                                        Universities</a></li>
-                                                <li class="menu-item"><a href="schools.html"
-                                                        class="menu-link nav-link">For
-                                                        Schools</a></li>
-                                                <li class="menu-item"><a href="corporates.html"
-                                                        class="menu-link nav-link">For
-                                                        Corporates</a></li>
-                                                <li class="menu-item"><a href="sscs.html" class="menu-link nav-link">For
-                                                        Sector
-                                                        Skill Council</a></li>
-                                                <li class="menu-item"><a href="individuals.html"
-                                                        class="menu-link nav-link">For
-                                                        Individuals</a></li>
-                                                <li class="menu-item"><a href="types.html"
-                                                        class="menu-link nav-link">Type of
-                                                        Assessments</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="apprenticeships.html"
-                                                class="menu-link nav-link">Apprenticeships/Hirings</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1872">
-                                            <a href="media.html" class="menu-link nav-link">Media/Events</a>
-                                            <button class="ast-menu-toggle" aria-expanded="false">
-                                                <span class="ast-icon icon-arrow"></span>
-                                            </button>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item"><a href="gallery.html"
-                                                        class="menu-link nav-link">Gallery</a>
-                                                </li>
-                                                <li class="menu-item"><a href="videos.html"
-                                                        class="menu-link nav-link">Videos</a>
-                                                </li>
-                                                <li class="menu-item"><a href="events.html"
-                                                        class="menu-link nav-link">Events</a>
-                                                </li>
-                                                <li class="menu-item"><a href="blog.html"
-                                                        class="menu-link nav-link">Blog</a></li>
-                                                <li class="menu-item"><a href="resources.html"
-                                                        class="menu-link nav-link">Our
-                                                        Resources</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
+                    </li>
+
+
+                    <li>
+                        <div class="nav-link">
+                            <a href="aboutUs.html" onclick="setActiveLink(event)">About Us</a>
                         </div>
-                        <div class="col-lg-1 col-md-4 col-5">
-                            <div class="header__main_right d-flex justify-content-end align-items-center">
-                                <div class="tp-header-search-icons normal-search mr-80 p-relative">
-                                    <div class="search-btn-wrap">
-                                        <button class="button-search-toggle position-relative">
-                                            <i class="header_search-button text-white far fa-search"></i>
-                                            <i class="header_search-close text-white far fa-times"></i>
-                                        </button>
-                                        <div class="tp-search-form p-relative">
-                                            <form action="#">
-                                                <input type="text" placeholder="Search ...">
-                                                <button type="submit" class="search-submit-icon"><i
-                                                        class="far fa-search"></i></button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tp-bar-icon">
-                                    <a href="javascript:void(0)" class="offcanvas-toggle-btn"><i
-                                            class="fal fa-bars"></i></a>
-                                </div>
-                            </div>
+                    </li>
+
+
+
+                    <li>
+                        <div class="nav-link">
+                            <a href="assessments.html" onclick="setActiveLink(event)">Assessments</a>
                         </div>
+                    </li>
+                    <!-- For Assessments -->
+                    <!-- <li class="dropdown_item">
+                    <div class="nav-link dropdown_button">
+                       <a href="assessments.html" onclick="setActiveLink(event)">Assessments</a><i
+                          class="ri-arrow-down-double-line "></i>
                     </div>
-                </div>
+                    <div class="dropdown_container">
+                       <div class="dropdown_content">
+                          <div class="dropdown_group">
+                             <div class="dropdown_icon">
+                                <i class="ri-pen-nib-fill "></i>
+                             </div>
+                             <span class="dropdown_title">Assessment Solutions</span>
+                             <ul class="dropdown_list">
+                                <li><a class="dropdown_link" href="#">Psychometric Tests</a></li>
+                                <li><a class="dropdown_link" href="#">Behavioral Tests</a></li>
+                                <li><a class="dropdown_link" href="#">Aptitude Tests</a></li>
+                                <li><a class="dropdown_link" href="#">Communication Skills Tests</a></li>
+                             </ul>
+                          </div>
+  
+  
+                          <div class="dropdown_group">
+                             <div class="dropdown_icon">
+                                <i class="ri-pen-nib-fill"></i>
+                             </div>
+                             <span class="dropdown_title">Hirings Solutions</span>
+                             <ul class="dropdown_list">
+                                <li><a class="dropdown_link" href="#">Technical Hirings</a></li>
+                                <li><a class="dropdown_link" href="#">Sales Hirings</a></li>
+                                <li><a class="dropdown_link" href="#">Blue Collar Hirings</a></li>
+                             </ul>
+                          </div>
+  
+                       </div>
+  
+                    </div>
+                 </li> -->
+
+
+                    <!-- For Apprenticeships -->
+                    <!-- <li class="dropdown_item">
+                    <div class="nav-link dropdown_button">
+                       <a href="apprenticeships.html" onclick="setActiveLink(event)">Apprenticeships</a><i
+                          class="ri-arrow-down-double-line "></i>
+                    </div>
+                    <div class="dropdown_container">
+                       <div class="dropdown_content">
+                          <div class="dropdown_group">
+                             <div class="dropdown_icon">
+                                <i class="ri-user-search-line"></i>
+                             </div>
+                             <span class="dropdown_title">Apprenticeship Solutions</span>
+                             <ul class="dropdown_list">
+                                <li><a class="dropdown_link" href="#">National Apprenticeship Promotion Scheme</a></li>
+                                <li><a class="dropdown_link" href="#">National Apprenticeship Training Scheme</a></li>
+                             </ul>
+                          </div>
+  
+                          <div class="dropdown_group">
+                             <div class="dropdown_icon">
+                                <i class="ri-user-search-line"></i>
+                             </div>
+                             <span class="dropdown_title">Vocational Courses</span>
+                             <ul class="dropdown_list">
+                                <li><a class="dropdown_link" href="#">B.VOC</a></li>
+                                <li><a class="dropdown_link" href="#">D.VOC</a></li>
+                                <li><a class="dropdown_link" href="#">M.VOC</a></li>
+                                <li><a class="dropdown_link" href="#">WILP</a></li>
+                             </ul>
+                          </div>
+  
+                       </div>
+  
+                    </div>
+                 </li> -->
+                    <li>
+                        <div class="nav-link">
+                            <a href="apprenticeships.html" onclick="setActiveLink(event)">Apprenticeships</a>
+                        </div>
+                    </li>
+
+                    <!-- For Gogig -->
+                    <li>
+                        <div class="nav-link">
+                            <a href="gogig.html" onclick="setActiveLink(event)">GoGig</a>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="nav-link">
+                            <a href="Events.html" onclick="setActiveLink(event)">Events</a>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
 
-            <!-- <div class="top-header">
-            <div class="row">
-               <div class="col-md-6 col-lg-6 text-left">
-                  <div class="top_header_d-flex">
-                     <div class="flat-mail">
-                        <p><i class="fa fa-envelope"></i> admin@eduvantage.in </p>
-                     </div>
-                     <div class="flat-phone">
-                        <p><i class="fa fa-mobile"></i> +91 11 4054 1330​ </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-6 col-lg-6 text-left">
-               </div>
-               <div class="col-md-6 col-lg-6 text-center">
-                  <div class="flat-button">
-                     <div class="">
-                        <a class="tp-btn-border" href="#">Request Demo<span>
-                              <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                    fill="currentColor"></path>
-                              </svg>
-                              <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                    fill="currentColor"></path>
-                              </svg>
-                           </span></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div> -->
 
-        </div>
+        </nav>
     </header>
-
-    <!-- offcanvas area -->
-    <div class="offcanvas__area off-canvas-bg" data-background="assets/img//bg/Sidearea-bg-img.png">
-        <div class="offcanvas_area-logo">
-            <span class="offcanvas__close-btn"><a href="javascript:void(0)"><i class="fal fa-times"></i></a></span>
-        </div>
-        <div class="offcanvas-content">
-            <div class="offcanvas-subtitle">
-                <span>ELEVATE YOUR BUSINESS WITH</span>
-            </div>
-            <div class="offcanvas-logo pb-30 pt-30">
-                <img src="assets/img/logo/logo.png" alt="">
-            </div>
-            <div class="offcanva-details">
-                <p>
-                    Partner with Eduvantage for Comprehensive Corporate Assessments Tailored to Your Organization's
-                    Success.
-                </p>
-            </div>
-            <div class="offcanva-btn">
-                <a href="#" class="tp-slider-btn   mt-40 d-inline-block" tabindex="-1">
-                    <span>
-                        <svg width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z"
-                                fill="currentColor"></path>
-                        </svg>
-                        <svg width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z"
-                                fill="currentColor"></path>
-                        </svg>
-                    </span>Get in touch
-                </a>
-            </div>
-        </div>
-        <div class="tp-mobile-menu"></div>
-        <div class="tp-footer__widget pb-30 offcanvas-ct-info">
-            <h3 class="tp-footer__widget-title">Quick Links</h3>
-            <ul>
-                <li><a href="#">1020-1023, 10th Floor, Devika Tower, Nehru Place, Delhi-110019</a></li>
-                <li><a href="tel:+88015569569365">+91 11 4054 1330​</a></li>
-                <li><a href="mailto:support@example.com">admin@eduvantage.in</a></li>
-                <li><span> Office Hours: 10AM - 6PM</span></li>
-                <li><span> Saturday - Wekend Day</span></li>
-            </ul>
-        </div>
-    </div>
-    <div class="body-overlay"></div>
-    <!-- header area end -->
-
 
     <main>
 
-        <!-- hero slider start -->
-        <div class="tp-slider-area p-relative">
-            <div class="tp-hero_slider slider-active p-relative">
-                <div class="tp-single-slider tp-slider-height p-relative"
-                    data-background="assets/img/bg/hero-bg-1.2.jpg">
-                </div>
-                <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/hero-bg.jpg">
-                </div>
-                <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/hero-bg-1.jpg">
-                </div>
-            </div>
-            <!-- <div class="slider-arrow"></div> -->
-        </div>
-        <!-- hero slider end  -->
-
-        <!-- about area start -->
-        <div class="tp-about-area pt-140">
-            <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-lg-6">
-                        <div class="tp-about-left pr-90">
-                            <div class="tp-section-wrapper pt-5">
-                                <span class="tp-section-subtitle">Who We Are?</span>
-                                <h2 class="tp-section-title pt-25 mb-30">We Ensure Equitable
-                                    and Inclusive Assessments/Hiring
-                                    Practices for All</h2>
-                                <p>Affiliations with 20+ Sector Skill Councils and government departments, including
-                                    DGT,
-                                    Karnataka Skill Development Mission, and Ministry of Minority Affairs.
-
-                                </p>
-                                <p class="pt-10">
-                                    Authorized Third Party Agency (TPA) by the Ministry of Skill Development &
-                                    Entrepreneurship,
-                                    playing a key role in implementing the National Apprenticeship Promotion Scheme
-                                    (NAPS).
-
-                                </p>
+        <div id="page1">
+            <div id="centerpage1">
+                <div id="left">
+                    <div class="page1-grid-container">
+                        <div class="centerpage1-grid-1">
+                            <div class="centerpage1-box">
+                                <h2>EDUVANTAGE</h2>
                             </div>
-                            <div class="mt-45 mb-30">
-                                <a href="about.html">
-                                    <div class="tp-theme-btn d-flex align-items-center">
-                                        <div class="tp-btn-inner">
-                                            <p class="mb-0">Let’t Talk</p>
-                                            <b>Get in Touch</b>
-                                            <span class="d-inline-block">
-                                                <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
-                                                        fill="currentColor" />
-                                                </svg>
-                                                <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
-                                                        fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
+                            <div class="centerpage1-box">
+                                <h2>📖</h2>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="tp-about-right p-relative">
-                            <div class="about-img text-md-end">
-                                <img src="assets/img/about/about.png" alt="">
-                            </div>
-                            <div class="tp-about-info text-center grey-bg-4">
-                                <h3>12</h3>
-                                <h4>Years of <br> Experience</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- about about end-->
-
-        <!-- cta area start -->
-        <div class="tp-cta-area">
-            <div class="container">
-                <div class="tp-cta-wrapper pt-50 pb-50" id="our-services">
-                    <div class="row">
-                        <div class="col-lg-9">
-                            <div class="tp-section-wrapper">
-                                <span class="tp-section-subtitle mb-25">Gain your business Success</span>
-                                <h2 class="tp-section-title">From strategy to delivery</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <br>
-                    <br>
-
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4">
-                            <div class="iq-fancy-box text-left">
-                                <img src="https://www.appstarsapplications.com/images/services/icon1.png" alt="#">
-                                <h4 class="iq-tw-6">For Universities & Colleges</h4>
-                                <p>We provide the solution wherein we completely automate the examination process based
-                                    on rules
-                                    & norms of the university</p>
-                                <p>Our solution is capable of providing customized reports & store records on server for
-                                    any
-                                    reference in future</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4 re-mt-30">
-                            <div class="iq-fancy-box text-left">
-                                <img src="https://www.appstarsapplications.com/images/services/icon2.png" alt="#">
-                                <h4 class="iq-tw-6">For Sector Skill Councils</h4>
-                                <p>We have 1000+ Sector Skill Council (SSC) certified assessors for conducting the
-                                    assessment
-                                    across 29 states and 7 UTs</p>
-                                <p>We work with Govt for assessing PMKVY
-                                    vocational and skill-based Government supported programmers</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4 re-mt-30">
-                            <div class="iq-fancy-box text-left">
-                                <img src="https://www.appstarsapplications.com/images/services/icon3.png" alt="#">
-                                <h4 class="iq-tw-6">For Corporates</h4>
-                                <p>With varying requirements of an Organization to hire candidates quickly &
-                                    effectively,
-                                    We have a perfect solution to ease the hiring process.</p>
-                                <p>We provide a screening system to hire quality candidates with reduced time and
-                                    efforts.
+                            <div class="centerpage1-box">
+                                <p>For Smarter Evaluation of Employees and Students
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4">
-                            <div class="iq-fancy-box text-left">
-                                <img src="https://www.appstarsapplications.com/images/services/icon1.png" alt="#">
-                                <h4 class="iq-tw-6">For Individuals</h4>
-                                <p>In today’s competitive world it is important to differentiate yourself with the rest.
-                                    One
-                                    effective way of doing that is to acquire additional skills and certify yourself for
-                                    that
-                                    skill. Your skills is what will get you your job or help you move up the ladder in
-                                    your work.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4 re-mt-30">
-                            <div class="iq-fancy-box text-left">
-                                <img src="https://www.appstarsapplications.com/images/services/icon2.png" alt="#">
-                                <h4 class="iq-tw-6">Lorem Ipsum</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been the industry's standard dummy text ever since the 1500s, when an unknown
-                                    printer took a
-                                    galley of type and scrambled it to make a type specimen book.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4 re-mt-30">
-                            <div class="iq-fancy-box text-left">
-                                <img src="https://www.appstarsapplications.com/images/services/icon3.png" alt="#">
-                                <h4 class="iq-tw-6">For Schools</h4>
-                                <p>Career Guidance for students, Psychometric assessment for school staff.</p>
-                                <p>
-                                    We provide training and need based support to university staff for conducting online
-                                    examination, making you self-reliant</p>
+                        <div class="centerpage1-grid-2">
+                            <div class="centerpage1-box">
+                                <h2>ASSESSMENTS</h2>
                             </div>
                         </div>
                     </div>
+                    <div class="card-container">
+                        <div class="heroSection-card">
+                            <div class="heroSection-img">
+                                <img src="./assets/img/gallery/study.jpg" alt="icon">
+                            </div>
+                            <div class="arrow-circle">
+                                <span>➔</span>
+                            </div>
+                        </div>
+
+
+                        <div class="heroSection-card">
+                            <div class="heroSection-img">
+                                <img src="./assets/img/gallery/book.jpg" alt="icon">
+                            </div>
+                            <div class="arrow-circle">
+                                <span>➔</span>
+                            </div>
+                        </div>
+
+                        <div class="heroSection-card">
+                            <div class="heroSection-img">
+                                <img src="./assets/img/gallery/desk.jpg" alt="icon">
+                            </div>
+                            <div class="arrow-circle">
+                                <span>➔</span>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                 </div>
-            </div>
-        </div>
-        <!-- cta end end -->
 
-
-        <div class="tp-price-table pt-130" style="display: none;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6">
-                        <div class="price-table__item pt-50 pb-40 pl-40 pr-40 price-border mb-30">
-                            <div class="price-table__top d-flex justify-content-between mb-50">
-                                <span>STARTER PACKAGE</span>
-                                <span><i class="pe-7s-cup"></i></span>
-                            </div>
-                            <div class="price-table__content">
-                                <h2 class="price-table__price mb-15">
-                                    $149
-                                </h2>
-                                <h3 class="price-table__title mb-30">
-                                    Website Optimization
-                                </h3>
-                                <div class="price-table__list mb-55">
-                                    <ul>
-                                        <li><span><i class="fal fa-check"></i></span>Maintenance of fences</li>
-                                        <li><span><i class="fal fa-check"></i></span>Gate maintenance</li>
-                                        <li><span><i class="fal fa-check"></i></span>Video surveillance system support
-                                        </li>
-                                        <li><span><i class="fal fa-check"></i></span>Configuring access systems</li>
-                                        <li class="disabled"><span><i class="fal fa-check"></i></span>Video surveillance
-                                            system support</li>
-                                        <li class="disabled"><span><i class="fal fa-check"></i></span>Configuring access
-                                            systems</li>
-                                    </ul>
-                                </div>
-                                <a class="tp-purchase-btn" href="#">
-                                    Purchase Now <span>
-                                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6">
-                        <div class="price-table__item pt-50 pb-40 pl-40 pr-40 price-border mb-30">
-                            <div class="price-table__top d-flex justify-content-between mb-50">
-                                <span>UPGRADED PACKAGE</span>
-                                <span><i class="pe-7s-diamond"></i></span>
-                            </div>
-                            <div class="price-table__content">
-                                <h2 class="price-table__price mb-15">
-                                    $249
-                                </h2>
-                                <h3 class="price-table__title mb-30">
-                                    Website Optimization
-                                </h3>
-                                <div class="price-table__list mb-55">
-                                    <ul>
-                                        <li><span><i class="fal fa-check"></i></span>Maintenance of fences</li>
-                                        <li><span><i class="fal fa-check"></i></span>Gate maintenance</li>
-                                        <li><span><i class="fal fa-check"></i></span>Video surveillance system support
-                                        </li>
-                                        <li><span><i class="fal fa-check"></i></span>Configuring access systems</li>
-                                        <li><span><i class="fal fa-check"></i></span>Video surveillance system support
-                                        </li>
-                                        <li class="disabled"><span><i class="fal fa-check"></i></span>Configuring access
-                                            systems</li>
-                                    </ul>
-                                </div>
-                                <a class="tp-purchase-btn" href="#">
-                                    Purchase Now <span>
-                                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6">
-                        <div class="price-table__item pt-50 pb-40 pl-40 pr-40 price-border mb-30">
-                            <div class="price-table__top d-flex justify-content-between mb-50">
-                                <span>FULL PACKAGE</span>
-                                <span><i class="pe-7s-star"></i></span>
-                            </div>
-                            <div class="price-table__content">
-                                <h2 class="price-table__price mb-15">
-                                    $349
-                                </h2>
-                                <h3 class="price-table__title mb-30">
-                                    Website Optimization
-                                </h3>
-                                <div class="price-table__list mb-55">
-                                    <ul>
-                                        <li><span><i class="fal fa-check"></i></span>Maintenance of fences</li>
-                                        <li><span><i class="fal fa-check"></i></span>Gate maintenance</li>
-                                        <li><span><i class="fal fa-check"></i></span>Video surveillance system support
-                                        </li>
-                                        <li><span><i class="fal fa-check"></i></span>Configuring access systems</li>
-                                        <li><span><i class="fal fa-check"></i></span>Video surveillance system support
-                                        </li>
-                                        <li><span><i class="fal fa-check"></i></span>Configuring access systems</li>
-                                    </ul>
-                                </div>
-                                <a class="tp-purchase-btn" href="#">
-                                    Purchase Now <span>
-                                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
+                <div id="right">
+                    <h1>
+                        <!-- Evaluates Knowledge, Skills, and Competencies -->
+                        We Evaluate
+                        <div id="Hiring">Knowledge,</div>
+                        <div id="Hiring">Skills,</div>
+                        And
+                        <div id="Assessing">competencies </div><br>
+                        <!-- Assess Precisely, Hire Confidently! -->
+                        <!-- Assess Smart-<br> Hire Right<br> -->
+                    </h1>
                 </div>
             </div>
         </div>
 
 
+        <div class="buiness-numbers-section">
+            <div class="buiness-numbers-left-section">
+                <h1>Eduvantage Assessments- <br>Regulated by <br>
+                    <a href="https://www.msde.gov.in/sites/default/files/2020-09/Upload%20Final%20AA%20guidelines-28.9.20_0.pdf"
+                        target="_blank" id="eat-redirection" class="Service-For">NCVET&nbsp;&#8599;</a>
+                </h1>
+            </div>
+            <div class="buiness-numbers-right-section">
+                <div class="content-block">
+                    <h4>Ensures Competency and Qualification through Examinations </h4>
+                    <p>Eduvantage boasts a strong presence in 18 states, positioning itself as a major player in the
+                        apprenticeship sector. Our ability to mobilize from major sourcing districts ensures that we
+                        connect
+                        with a broad range of candidates.<br><br>
+                        We take pride in having mobilized over 100,000 candidates, offering them apprenticeship
+                        opportunities
+                        that match their skills. Our efforts aim to unlock the potential of each individual, helping
+                        them find pathways for career advancement.
 
-        <!-- SSCs slider start  -->
-        <div class="tp-testimonial-area pt-0 pb-120" id="our-Industries">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1 text-center">
+                    </p>
+                </div>
+                <div class="content-block">
+                    <h4>PARTNERSHIPS AND WORKFORCE DEVELOPMENT</h4>
+                    <p>Eduvantage partners with over 1,000 ITIs and educational institutions, creating a strong
+                        foundation for delivering quality apprenticeship programs.<br>
+                        With our extensive network and commitment, Eduvantage is driving forward the
+                        development of a skilled workforce. We are focused on bridging the gap between education and
+                        employment, ensuring that apprenticeship becomes a key stepping stone to career success.</p>
+                </div>
+            </div>
 
-                        <div class="tp-section-wrapper text-center">
-                            <span class="tp-section-subtitle mb-25">We are affiliated from</span>
-                            <h2 class="tp-section-title mb-50">Sector Skill Councils</h2>
-                            <p>
-                                The underlying responsibility of eduvantage is to operationalise the process of onsite
-                                assessment of the trainees taking overall care of the process of evaluation.
-                                Our primary goal is to offer scalable, high-quality, and transparent assessments to
-                                corporations
-                                and industries in both manufacturing and service sectors.
+        </div>
+
+
+        <div id="page5">
+            <div class="tp-section-wrapper text-center">
+                <span class="tp-section-subtitle mb-30">A comprehensive suite for
+                    end-to-end, client-focused assessments.</span>
+                <h2 class="tp-section-title mb-70">Our Evaluation Services</h2>
+            </div>
+            <div class="blogs-section-container-1">
+
+                <div class="blog-item">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="card-title">Evaluation for <div class="Service-For">Corporates</div>
+                            </h2>
+                            <p class="card-description">
+                                Plays a critical role in recruitment, talent management, leadership development, and
+                                overall organizational growth. Corporate assessments can be customized to fit specific
+                                job roles, industry goals, and requirements.
                             </p>
+                            <a href="contactUs.html" class="expand-link">Expand &nbsp; &#8599;</a>
                         </div>
 
-                        <div class="row justify-content-center align-items-center pt-50">
-                            <div class="col-sm-12 industries">
 
-                                <ul class="mailcolumn">
-                                    <li class="innercolumn">
-                                        <ul class="indlist ">
-                                            <li class="fntsports wow fadeInUp" data-wow-delay="0.2s">
-                                                <span class="imgicon"></span>
-                                                <a href="fantasy-sports-app-development">
-                                                    <strong>Fantasy Sports</strong>
-                                                </a>
-                                            </li>
-                                            <li class="fdrst wow fadeInUp" data-wow-delay="0.5s">
-                                                <span class="imgicon"></span>
-                                                <a href="food-restaurant-solutions">
-                                                    <strong>Food &amp; Restaurant</strong>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="innercolumn">
-                                        <ul class="indlist ">
-                                            <li class="healthfit  wow fadeInUp" data-wow-delay="0.2s">
-                                                <span class="imgicon"></span>
-                                                <a href="health-care-fitness">
-                                                    <strong>Healthcare &amp; Fitness</strong>
-                                                </a>
-                                            </li>
-                                            <li class="rlest  wow fadeInUp" data-wow-delay="0.4s">
-                                                <span class="imgicon"></span>
-                                                <a href="real-estate-housing-solutions">
-                                                    <strong>Real Estate</strong>
-                                                </a>
-                                            </li>
-                                            <li class="trvl  wow fadeInUp" data-wow-delay="0.6s">
-                                                <span class="imgicon"></span>
-                                                <a href="travel-leisure-solutions">
-                                                    <strong>Travel</strong>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="innercolumn">
-                                        <ul class="indlist ">
-                                            <li class="trnspt  wow fadeInUp" data-wow-delay="0.2s">
-                                                <span class="imgicon"></span>
-                                                <a href="transportation-logistics-solutions">
-                                                    <strong>Transportation</strong>
-                                                </a>
-                                            </li>
-                                            <li class="sptbet  wow fadeInUp" data-wow-delay="0.4s">
-                                                <span class="imgicon"></span>
-                                                <a href="sports-betting-app-development">
-                                                    <strong>Sports Batting</strong>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="innercolumn">
-                                        <ul class="indlist ">
-                                            <li class="edulearn  wow fadeInUp" data-wow-delay="0.2s">
-                                                <span class="imgicon"></span>
-                                                <a href="education-elearning-solutions">
-                                                    <strong>Education and E-Learning</strong>
-                                                </a>
-                                            </li>
-                                            <li class="ecomretail  wow fadeInUp" data-wow-delay="0.4s">
-                                                <span class="imgicon"></span>
-                                                <a href="retail-ecommerce-solutions">
-                                                    <strong>E-Commerce &amp; Retail</strong>
-                                                </a>
-                                            </li>
-                                            <li class="bnkfinan  wow fadeInUp" data-wow-delay="0.4s">
-                                                <span class="imgicon"></span>
-                                                <a href="banking-finance-solutions">
-                                                    <strong>Banking &amp; Finance</strong>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="innercolumn">
-                                        <ul class="indlist ">
-                                            <li class="medenter  wow fadeInUp" data-wow-delay="0.2s">
-                                                <span class="imgicon"></span>
-                                                <a href="media-entertainment-solutions">
-                                                    <strong>Media &amp; Entertainment</strong>
-                                                </a>
-                                            </li>
-                                            <li class="agri  wow fadeInUp" data-wow-delay="0.4s">
-                                                <span class="imgicon"></span>
-                                                <a href="">
-                                                    <strong>Agriculture</strong>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                    </div>
+                </div>
 
-                            </div>
+                <div class="blog-item">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="card-title">Evaluation Via <div class="Service-For">Aptitude Tests</div>
+                            </h2>
+                            <p class="card-description">
+                                Tests customized for different industries and roles, such as technical roles
+                                requiring mechanical or spatial reasoning or managerial positions requiring verbal and
+                                critical thinking skills.
+                            </p>
+                            <a href="contactUs.html" class="expand-link">Expand &nbsp; &#8599;</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="card-title">Evaluation for <div class="Service-For">Communication</div>
+                            </h2>
+                            <p class="card-description">
+                                Assessments designed to evaluate a person's ability to
+                                effectively convey information, ideas, and thoughts in various forms, including verbal,
+                                written, and non-verbal communication.
+                            </p>
+                            <a href="contactUs.html" class="expand-link">Expand &nbsp; &#8599;</a>
                         </div>
 
                     </div>
                 </div>
+
+
             </div>
-        </div>
-        <!-- SSCs slider end  -->
-
-        <!--  NATS And NAPS  start  -->
-        <div class="tp-testimonial-area pb-120" id="our-technology">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1 text-center">
-
-                        <div class="tp-section-wrapper text-center">
-                            <span class="tp-section-subtitle mb-30">We help govt achieving the aprenticeship
-                                goals</span>
-                            <h2 class="tp-section-title mb-70"> Our NAPS and NATS partners</h2>
+            <div class="blogs-section-container-2">
+                <div class="blog-item">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="card-title">Evaluation Via <div class="Service-For">Behavioral Tests</div>
+                            </h2>
+                            <p class="card-description">
+                                Predicts how a person will respond in various professional or personal scenarios by
+                                measuring traits like communication style, teamwork, leadership, & decision-making
+                                ability.
+                            </p>
+                            <a href="contactUs.html" class="expand-link">Expand &nbsp; &#8599;</a>
                         </div>
 
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-sm-12 carousel">
-                                <div class="tp-team__social carousel-track">
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/1.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/2.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/3.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/4.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/5.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/6.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/7.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/8.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/9.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/10.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/11.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/12.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/13.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/14.png"
-                                            style="width:80px;"></a>
-                                    <a class="carousel-item" href="#"><img src="assets/img/tech/15.png"
-                                            style="width:80px;"></a>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="card-title">Evaluation Via <div class="Service-For">Psychometric Tests</div>
+                            </h2>
+                            <p class="card-description">
+                                Assessment designed to measure an individual’s cognitive abilities, personality traits,
+                                behavioral styles, and psychological attributes.
+                            </p>
+                            <a href="contactUs.html" class="expand-link">Expand &nbsp; &#8599;</a>
                         </div>
 
-                        <div class="postbox__read-more pt-20">
-                            <a class="tp-btn-border" href="#">Request Pricing<span>
-                                    <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
+                    </div>
+                </div>
+                <div>
+                    <a href="./contactUs.html">
+                        <div class="tp-theme-btn d-flex align-items-center">
+                            <div class="tp-btn-inner">
+                                <p class="mb-0">Let’t Talk</p>
+                                <b>Get in Touch</b>
+                                <span class="d-inline-block">
+                                    <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
-                                            d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                            fill="currentColor"></path>
-                                    </svg>
-                                    <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                                            fill="currentColor"></path>
-                                    </svg>
-                                </span></a>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- NATS And NAPS slider end  -->
-
-        <!-- Govt Client slider end  --><!-- Govt Client end  -->
-        <div class="tp-testimonial-area pb-120" id="our-technology">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1 text-center">
-
-                        <div class="tp-section-wrapper text-center">
-                            <span class="tp-section-subtitle mb-30">We help govt achieving the aprenticeship
-                                goals</span>
-                            <h2 class="tp-section-title mb-70"> Our NAPS and NATS partners</h2>
-                        </div>
-                        <div class="container swiper">
-                            <div class="slider-wrapper">
-                                <div class="card-list swiper-wrapper">
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/1.png" alt="company image" class="company-image">
-                                        <h2 class=" company-name">Fiem</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/2.png" alt="company image" class="company-image">
-                                        <h2 class=" company-name">Signet Group</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/3.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Shiroki</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/4.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Maithan Steel</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/5.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Excide</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/6.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Supreme</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/7.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Maharaja Agrasen</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/8.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Jns</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/9.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Daikin</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/10.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Bajaj</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/11.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Ultratech</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/12.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Keventers</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/13.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">Surya Cement</h2>
-                                    </div>
-                                    <div class="card-item swiper-slide">
-                                        <img src="assets/img/tech/14.png" alt="company image" class="company-image">
-                                        <h2 class="company-name">TPCL Pakaging</h2>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- If we need pagination -->
-                            <div class="swiper-pagination"></div>
-
-                            <!-- If we need navigation buttons -->
-                            <div class="swiper-slide-button swiper-button-prev"></div>
-                            <div class="swiper-slide-button swiper-button-next"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- lasted blog start  -->
-        <div class="tp-lasted-blog pt-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="tp-section-wrapper text-center">
-                            <span class="tp-section-subtitle mb-30">Our Latest News & Blog</span>
-                            <h2 class="tp-section-title mb-70">Stay updated with our <br> latest posts</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tp-blog">
-                            <div class="tp-blog__thumb">
-                                <img src="assets/img/blog/blog-1.jpg" alt="">
-                            </div>
-                            <div class="tp-blog__meta pt-25 pb-15">
-                                <span> <a href="#">Rasalina</a> /</span>
-                                <span> <a href="#">BUsiness</a> /</span>
-                                <span> <a href="#">23.06.2022</a></span>
-                            </div>
-                            <h3 class="tp-blog__title"><a href="#">How To Build Rapport With Your Web Design
-                                    Clients</a>
-                            </h3>
-                            <a class="tp-btn-sm-black" href="#">
-                                <span>
-                                    <svg width="36" height="8" viewBox="0 0 36 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M35.3536 4.35355C35.5488 4.15829 35.5488 3.84171 35.3536 3.64644L32.1716 0.464463C31.9763 0.269201 31.6597 0.269201 31.4645 0.464463C31.2692 0.659726 31.2692 0.976308 31.4645 1.17157L34.2929 4L31.4645 6.82842C31.2692 7.02369 31.2692 7.34027 31.4645 7.53553C31.6597 7.73079 31.9763 7.73079 32.1716 7.53553L35.3536 4.35355ZM4.37114e-08 4.5L35 4.5L35 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z"
+                                            d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
                                             fill="currentColor" />
                                     </svg>
-                                    <svg width="36" height="8" viewBox="0 0 36 8" fill="none"
+                                    <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
-                                            d="M35.3536 4.35355C35.5488 4.15829 35.5488 3.84171 35.3536 3.64644L32.1716 0.464463C31.9763 0.269201 31.6597 0.269201 31.4645 0.464463C31.2692 0.659726 31.2692 0.976308 31.4645 1.17157L34.2929 4L31.4645 6.82842C31.2692 7.02369 31.2692 7.34027 31.4645 7.53553C31.6597 7.73079 31.9763 7.73079 32.1716 7.53553L35.3536 4.35355ZM4.37114e-08 4.5L35 4.5L35 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z"
+                                            d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
                                             fill="currentColor" />
                                     </svg>
                                 </span>
-                                View MOre
-                            </a>
+                            </div>
                         </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mainImg">
+            <div id="center">
+                <div class="headingmainImg">
+                    <h1 class="Assessments">Assessments.</h1>
+                    <div class="textmainImg">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quo ipsum accusantium
+                            possimus
+                            facilis aliquid saepe ad, perspiciatis modi illo eos doloribus nam. Labore molestias autem
+                            recusandae pariatur, sequi tempora.</p>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tp-blog">
-                            <div class="tp-blog__thumb">
-                                <img src="assets/img/blog/blog-2.jpg" alt="">
-                            </div>
-                            <div class="tp-blog__meta pt-25 pb-15">
-                                <span> <a href="#">Rasalina</a> /</span>
-                                <span> <a href="#">BUsiness</a> /</span>
-                                <span> <a href="#">23.06.2022</a></span>
-                            </div>
-                            <h3 class="tp-blog__title"><a href="#">How We Improved Our Core Web Vitals (Case
-                                    Study)</a></h3>
-                            <a class="tp-btn-sm-black" href="#">
-                                <span>
-                                    <svg width="36" height="8" viewBox="0 0 36 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M35.3536 4.35355C35.5488 4.15829 35.5488 3.84171 35.3536 3.64644L32.1716 0.464463C31.9763 0.269201 31.6597 0.269201 31.4645 0.464463C31.2692 0.659726 31.2692 0.976308 31.4645 1.17157L34.2929 4L31.4645 6.82842C31.2692 7.02369 31.2692 7.34027 31.4645 7.53553C31.6597 7.73079 31.9763 7.73079 32.1716 7.53553L35.3536 4.35355ZM4.37114e-08 4.5L35 4.5L35 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                    <svg width="36" height="8" viewBox="0 0 36 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M35.3536 4.35355C35.5488 4.15829 35.5488 3.84171 35.3536 3.64644L32.1716 0.464463C31.9763 0.269201 31.6597 0.269201 31.4645 0.464463C31.2692 0.659726 31.2692 0.976308 31.4645 1.17157L34.2929 4L31.4645 6.82842C31.2692 7.02369 31.2692 7.34027 31.4645 7.53553C31.6597 7.73079 31.9763 7.73079 32.1716 7.53553L35.3536 4.35355ZM4.37114e-08 4.5L35 4.5L35 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                </span>
-                                View MOre
-                            </a>
-                        </div>
+                    <h1 class="Skilling">Skilling.</h1>
+                    <div class="textmainImg">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus cupiditate molestias
+                            consequuntur
+                            voluptatibus praesentium quibusdam atque architecto ab. Minima, quia harum. Ullam, sit eum.
+                            Saepe,
+                            fugiat, deserunt harum dignissimos laudantium beatae eveniet voluptate repellat doloribus
+                            eos
+                            totam, repudiandae perspiciatis nemo autem nostrum aliquam maiores quaerat perferendis
+                            assumenda
+                            non amet necessitatibus.</p>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tp-blog">
-                            <div class="tp-blog__thumb">
-                                <img src="assets/img/blog/blog-3.jpg" alt="">
-                            </div>
-                            <div class="tp-blog__meta pt-25 pb-15">
-                                <span> <a href="#">Rasalina</a> /</span>
-                                <span> <a href="#">BUsiness</a> /</span>
-                                <span> <a href="#">23.06.2022</a></span>
-                            </div>
-                            <h3 class="tp-blog__title"><a href="#">How To Develop Your Business’ Technology
-                                    Roadmap</a></h3>
-                            <a class="tp-btn-sm-black" href="#">
-                                <span>
-                                    <svg width="36" height="8" viewBox="0 0 36 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M35.3536 4.35355C35.5488 4.15829 35.5488 3.84171 35.3536 3.64644L32.1716 0.464463C31.9763 0.269201 31.6597 0.269201 31.4645 0.464463C31.2692 0.659726 31.2692 0.976308 31.4645 1.17157L34.2929 4L31.4645 6.82842C31.2692 7.02369 31.2692 7.34027 31.4645 7.53553C31.6597 7.73079 31.9763 7.73079 32.1716 7.53553L35.3536 4.35355ZM4.37114e-08 4.5L35 4.5L35 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                    <svg width="36" height="8" viewBox="0 0 36 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M35.3536 4.35355C35.5488 4.15829 35.5488 3.84171 35.3536 3.64644L32.1716 0.464463C31.9763 0.269201 31.6597 0.269201 31.4645 0.464463C31.2692 0.659726 31.2692 0.976308 31.4645 1.17157L34.2929 4L31.4645 6.82842C31.2692 7.02369 31.2692 7.34027 31.4645 7.53553C31.6597 7.73079 31.9763 7.73079 32.1716 7.53553L35.3536 4.35355ZM4.37114e-08 4.5L35 4.5L35 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                </span>
-                                View MOre
-                            </a>
-                        </div>
+                    <h1 class="Apprenticeships">Apprenticeship.</h1>
+                    <div class="textmainImg">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis eos voluptate sit expedita
+                            sapiente itaque accusamus pariatur placeat eius fugit sequi facere labore modi alias nostrum
+                            facilis nisi ullam provident accusantium, consectetur eligendi cupiditate dicta harum ipsa.
+                            Est,
+                            quod. Iusto.</p>
                     </div>
+                </div>
+                <div class="imagecontainer">
+                    <img src="./assets/img/Edu Images NEw/computer-education.jpg" alt=" skilling">
+                </div>
+                <div class="imagecontainer">
+                    <img src="./assets/img/Edu Images NEw/sample6.png" alt="skilling">
+                </div>
+                <div class="imagecontainer">
+                    <img src="./assets/img/Edu Images NEw/sample5.jpg" alt="skilling">
                 </div>
             </div>
         </div>
-        <!-- lasted blog end  -->
+
+    </main>
 
     </main>
 
     <!-- footer area start -->
     <footer>
-        <div class="tp-footer__area black-bg">
-            <div class="tp-footer">
-
-                <!-- footer top -->
-                <div class="tp-footer__top pt-90 pb-60">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-5">
-                                <h3 class="tp-footer__top-title">Have a project in mind?
-                                    Let’s work together.</h3>
-                            </div>
-                            <div class="col-lg-7">
-                                <div class="tp-insta d-flex justify-content-lg-end">
-                                    <div class="tp-insta__item p-relative ml-20">
-                                        <img src="assets/img/footer/footer-sm-1.jpg" alt="">
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                    <div class="tp-insta__item p-relative ml-20">
-                                        <img src="assets/img/footer/footer-sm-2.jpg" alt="">
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                    <div class="tp-insta__item p-relative ml-20">
-                                        <img src="assets/img/footer/footer-sm-3.jpg" alt="">
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                    <div class="tp-insta__item p-relative ml-20">
-                                        <img src="assets/img/footer/footer-sm-4.jpg" alt="">
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="footer-container">
+            <div class="left-section">
+                <h1>Want to hire skilled <br />Employees?<br />Contact Us!</h1>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>OUR SERVICES:</h3>
+                        <ul>
+                            <li>Asessments</li>
+                            <li>Hirings</li>
+                            <li>Placements</li>
+                            <li>Skilling</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>OUR LOCATIONS:</h3>
+                        <ul>
+                            <li>Delhi</li>
+                            <li>Noida</li>
+                            <li>Chennai</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Details:</h3>
+                        <ul>
+                            <li>+91 11 4054 1330</li>
+                            <li>admin@eduvantage.in</li>
+                        </ul>
                     </div>
                 </div>
-                <!-- footer top end  -->
-
-
-                <!-- main-footer start  -->
-                <div class="tp-footer__main">
-                    <div class="container">
-                        <div class="tp-footer-border pt-60 pb-30">
-                            <div class="row">
-
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="tp-footer__widget pb-30">
-                                        <h3 class="tp-footer__widget-title">Our Service</h3>
-                                        <ul>
-                                            <li><a href="#">Tax strategy</a></li>
-                                            <li><a href="#">Financial advices</a></li>
-                                            <li><a href="#">Insurance strategy</a></li>
-                                            <li><a href="#">Manage investment</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="tp-footer__widget  pb-30">
-                                        <h3 class="tp-footer__widget-title">Our Locations</h3>
-                                        <ul>
-                                            <li><a href="#">Delhi</a></li>
-                                            <li><a href="#">Noida</a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="tp-footer__widget  pb-30">
-                                        <h3 class="tp-footer__widget-title">Contact Us</h3>
-                                        <ul>
-                                            <li><a href="tel:+91 00000 00000"> Mobile : +91 11 4054 1330​</a></li>
-                                            <li><a href="mailto:support@example.com"> Mail : admin@eduvantage.in</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="tp-footer__widget  pb-30">
-
-                                        <a href="#">
-                                            <div class="tp-theme-btn d-flex align-items-center white-bg">
-                                                <div class="tp-btn-inner">
-                                                    <p class="mb-0">Let’t Talk</p>
-                                                    <b>Get in Touch</b>
-                                                    <span class="d-inline-block">
-                                                        <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
-                                                                fill="currentColor" />
-                                                        </svg>
-                                                        <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
-                                                                fill="currentColor" />
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- main footer end  -->
             </div>
-        </div>
 
+            <div class="right-section">
+                <div class="location">
+                    <p>OUR LOCATION:</p>
+                    <span>Eduvantage Private Limited <br />
+                        1020-1023, 10th Floor, Devika Tower, Nehru Place, New Delhi-110019</span>
+                </div>
+                <div class="social-links">
+                    <p>OUR SOCIAL PRESENCE:</p>
+                    <div class="footer-social-buttons"><a
+                            href="https://www.linkedin.com/company/eduvantage-private-limited/about/"><i
+                                class="fab fa-linkedin"> </i> LinkedIn</a></div>
+                    <div class="footer-social-buttons"><a href="https://www.facebook.com/eduvantagejob"><i
+                                class="fab fa-facebook"></i> Facebook</a></div>
+                    <div class="footer-social-buttons"><a
+                            href="https://www.instagram.com/eduvantagepvt.ltd?igsh=endwdjdxeGp5enE5"><i
+                                class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="footer-social-buttons"><a href="https://www.youtube.com/watch?v=YlC_ZHEdsB8"><i
+                                class="fab fa-youtube"></i> Youtube</a></div>
+                </div>
+                <div class="get-in-touch-button">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="tp-footer__widget  pb-0">
+
+                            <a href="./contactUs.html">
+                                <div class="tp-theme-btn d-flex align-items-center white-bg">
+                                    <div class="tp-btn-inner">
+                                        <p class="mb-0">Let’t Talk</p>
+                                        <b>Get in Touch</b>
+                                        <span class="d-inline-block">
+                                            <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                            <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="row black-bg">
+              <div class="col-md-8 col-0">
+                 <div class="tp-copyrigh-text mb-0">
+                    <span>© 2024 Eduvantage - Assessments/Apprenticeship . All Rights Reserved.</span>
+                 </div>
+              </div>
+              <div class="col-md-4 col-12">
+                 <div class="tp-footer-social-icon mb-15 text-md-end">
+                    <ul>
+                       <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                       <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                       <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                       <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                       <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                 </div>
+              </div>
+           </div> -->
+        </div>
         <!-- footer copy right -->
-        <div class="top-footer-copyright pt-30 black-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-12">
-                        <div class="tp-copyrigh-text mb-30">
-                            <span>© 2024 Eduvantage - Assessments/Apprenticeship . All Rights Reserved.</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <div class="tp-footer-social-icon mb-30 text-md-end">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="footer-bottom">
+            <p>Eduvantage Assessment Agency.</p>
+            <p>© 2024 All Rights Reserved</p>
         </div>
+        <!-- <div class="top-footer-copyright pt-15 black-bg">
+           <div class="container"> -->
+
+        <!-- </div>
+        <!-- </div> -->
         <!-- footer copyright end  -->
     </footer>
     <!-- footer area end -->
@@ -1135,21 +602,36 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/highlight.js"></script>
 
+    <!-- Linking LocomotiveJS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <!-- Linking gsap script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Linking GSAP Scroll triger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="assets/js/gsapScript.js"></script>
+    <script>
+        // Your GSAP animation code
+        gsap.to("#one", {
+            width: "100%",
+            ease: "expo.inOut",
+            duration: 10
+        });
+    </script>
+
+
     <!-- Linking Swiper script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Linking custom script -->
     <script src="assets/js/swiper.js"></script>
-    <script>
-        function setActive(el) {
-            // Remove active class from all items
-            const items = document.querySelectorAll('.navbar-item');
-            items.forEach((item) => item.classList.remove('navbar-item-active'));
 
-            // Add active class to the clicked item
-            el.classList.add('navbar-item-active');
-        }
-    </script>
 </body>
 
 </html>

@@ -115,6 +115,25 @@ govtClients.forEach((client) => {
 })
 
 
+const newsContainer = document.getElementById('moving-news-container');
+const newsItems = document.querySelectorAll('.news-item');
+
+// Pause animation when mouse enters
+newsContainer.addEventListener('mouseenter', () => {
+    newsItems.forEach(item => {
+        item.classList.add('paused');
+    });
+});
+
+newsContainer.addEventListener('mouseleave', () => {
+    newsItems.forEach(item => {
+        item.classList.remove('paused');
+    });
+});
+
+
+
+
 
 // YouTube vedio Player
 
@@ -135,3 +154,42 @@ govtClients.forEach((client) => {
 
 
 // });
+
+
+
+
+
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    }
+
+    ,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+    ,
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

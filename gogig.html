@@ -1,0 +1,501 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Eduvantage</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/Favicon-Eduvantage.png">
+
+    <!-- Linking swiper js here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Linking Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Linking Locomotive CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" rel="stylesheet" />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/backtotop.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/ui-icon.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- pre loader area start -->
+
+    <div id="Govt-Clients"></div>
+    <!-- pre loader area start -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                loading content here
+            </div>
+        </div>
+    </div>
+    <!-- pre loader area end -->
+
+    <!-- back to top start -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <header class="header">
+        <nav class="nav navContainer">
+            <a href="index.html" class="nav__logo">
+                <img src="./assets//img/logo/logoNoBg.png" alt="edulogo">
+            </a>
+            <div class="nav_toggle" id="nav_toggle">
+                <i class="ri-menu-line nav_toggle-menu"></i>
+                <i class="ri-close-circle-line nav_toggle-close"></i>
+
+            </div>
+
+            <div class="nav_menu" id="nav_menu">
+                <ul class="nav_list">
+
+                    <li>
+                        <div class="nav-link">
+                            <a href="index.html" onclick="setActiveLink(event)">Home</a>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="nav-link">
+                            <a href="aboutUs.html" onclick="setActiveLink(event)">About Us</a>
+                        </div>
+                    </li>
+
+
+
+                    <li>
+                        <div class="nav-link">
+                            <a href="assessments.html" onclick="setActiveLink(event)">Assessments</a>
+                        </div>
+                    </li>
+                    <!-- For Assessments -->
+                    <!-- <li class="dropdown_item">
+                    <div class="nav-link dropdown_button">
+                       <a href="assessments.html" onclick="setActiveLink(event)">Assessments</a><i
+                          class="ri-arrow-down-double-line "></i>
+                    </div>
+                    <div class="dropdown_container">
+                       <div class="dropdown_content">
+                          <div class="dropdown_group">
+                             <div class="dropdown_icon">
+                                <i class="ri-pen-nib-fill "></i>
+                             </div>
+                             <span class="dropdown_title">Assessment Solutions</span>
+                             <ul class="dropdown_list">
+                                <li><a class="dropdown_link" href="#">Psychometric Tests</a></li>
+                                <li><a class="dropdown_link" href="#">Behavioral Tests</a></li>
+                                <li><a class="dropdown_link" href="#">Aptitude Tests</a></li>
+                                <li><a class="dropdown_link" href="#">Communication Skills Tests</a></li>
+                             </ul>
+                          </div>
+  
+  
+                          <div class="dropdown_group">
+                             <div class="dropdown_icon">
+                                <i class="ri-pen-nib-fill"></i>
+                             </div>
+                             <span class="dropdown_title">Hirings Solutions</span>
+                             <ul class="dropdown_list">
+                                <li><a class="dropdown_link" href="#">Technical Hirings</a></li>
+                                <li><a class="dropdown_link" href="#">Sales Hirings</a></li>
+                                <li><a class="dropdown_link" href="#">Blue Collar Hirings</a></li>
+                             </ul>
+                          </div>
+  
+                       </div>
+  
+                    </div>
+                 </li> -->
+
+
+                    <!-- For Apprenticeships -->
+                    <!-- <li class="dropdown_item">
+                    <div class="nav-link dropdown_button">
+                       <a href="apprenticeships.html" onclick="setActiveLink(event)">Apprenticeships</a><i
+                          class="ri-arrow-down-double-line "></i>
+                    </div>
+                    <div class="dropdown_container">
+                       <div class="dropdown_content">
+                          <div class="dropdown_group">
+                             <div class="dropdown_icon">
+                                <i class="ri-user-search-line"></i>
+                             </div>
+                             <span class="dropdown_title">Apprenticeship Solutions</span>
+                             <ul class="dropdown_list">
+                                <li><a class="dropdown_link" href="#">National Apprenticeship Promotion Scheme</a></li>
+                                <li><a class="dropdown_link" href="#">National Apprenticeship Training Scheme</a></li>
+                             </ul>
+                          </div>
+  
+                          <div class="dropdown_group">
+                             <div class="dropdown_icon">
+                                <i class="ri-user-search-line"></i>
+                             </div>
+                             <span class="dropdown_title">Vocational Courses</span>
+                             <ul class="dropdown_list">
+                                <li><a class="dropdown_link" href="#">B.VOC</a></li>
+                                <li><a class="dropdown_link" href="#">D.VOC</a></li>
+                                <li><a class="dropdown_link" href="#">M.VOC</a></li>
+                                <li><a class="dropdown_link" href="#">WILP</a></li>
+                             </ul>
+                          </div>
+  
+                       </div>
+  
+                    </div>
+                 </li> -->
+                    <li>
+                        <div class="nav-link">
+                            <a href="apprenticeships.html" onclick="setActiveLink(event)">Apprenticeships</a>
+                        </div>
+                    </li>
+
+                    <!-- For Gogig -->
+                    <li>
+                        <div class="nav-link">
+                            <a href="gogig.html" onclick="setActiveLink(event)">GoGig</a>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="nav-link">
+                            <a href="Events.html" onclick="setActiveLink(event)">Events</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="page1">
+            <div id="centerpage1">
+                <div id="left">
+                    <div class="page1-grid-container">
+                        <div class="centerpage1-grid-1">
+                            <div class="centerpage1-box">
+                                <h2>GoGig</h2>
+                            </div>
+                            <div class="centerpage1-box">
+                                <h2>📖</h2>
+                            </div>
+                            <div class="centerpage1-box">
+                                <p>The Platform for Apprenticeship & Gig Work Opportunities</p>
+                            </div>
+                        </div>
+                        <div class="centerpage1-grid-2">
+                            <div class="centerpage1-box">
+                                <h2>SOLUTIONS</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <div class="heroSection-card">
+                            <div class="heroSection-img">
+                                <img src="./assets/img/gallery/study.jpg" alt="icon">
+                            </div>
+                            <div class="arrow-circle">
+                                <a href="https://play.google.com/store/apps/details?id=com.gigzd.partner&pcampaignid=web_share
+                                    "><span>➔</span></a>
+                            </div>
+                        </div>
+
+
+                        <div class="heroSection-card">
+                            <div class="heroSection-img">
+                                <img src="./assets/img/gallery/book.jpg" alt="icon">
+                            </div>
+                            <div class="arrow-circle">
+                                <a href="https://play.google.com/store/apps/details?id=com.gigzd.app&pcampaignid=web_share
+                                "><span>➔</span></a>
+                            </div>
+                        </div>
+
+                        <div class="heroSection-card">
+                            <div class="heroSection-img">
+                                <img src="./assets/img/gallery/desk.jpg" alt="icon">
+                            </div>
+                            <div class="arrow-circle">
+                                <a href="https://www.gogig.ai
+                                    "><span>➔</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div id="right">
+                    <h1>
+                        Streamline
+                        <div id="Assessing">Apprenticeships</div><br>And Gigs With
+                        <div id="Hiring">GoGig</div>
+                        <!-- Assess Precisely, Hire Confidently! -->
+                        <!-- Assess Smart-<br> Hire Right<br> -->
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="buiness-numbers-section">
+
+            <div class="buiness-numbers-left-section">
+                <h1>Shaping Skills, <br>Bridging Opportunities</h1>
+                <br>
+                <div class="mt-30 mb-30 d-flex align-items-center">
+                    <a href="./contactUs.html">
+                        <div class="tp-theme-btn d-flex align-items-center">
+                            <div class="tp-btn-inner">
+                                <p class="mb-0">Let’t Talk</p>
+                                <b>Get in Touch</b>
+                                <span class="d-inline-block">
+                                    <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="buiness-numbers-right-section">
+                <div class="content-block">
+                    <h4>
+                        <a href="https://play.google.com/store/apps/details?id=com.gigzd.partner&pcampaignid=web_share
+                        " target="_blank" id="eat-redirection" class="Service-For">Try GoGig candidate&nbsp;&#8599;</a>
+                    </h4>
+                    <p>
+                        Gogig is a comprehensive mobile application designed primarily to provide seamless
+                        apprenticeship
+                        opportunities to aspiring candidates. It serves as a complete, end-to-end solution that not only
+                        helps users discover and apply for apprenticeship positions but also supports them throughout
+                        their entire apprenticeship journey. From the moment a candidate gets placed in an
+                        apprenticeship role, Gogig ensures that all the relevant information — including the contract
+                        letter, stipend slips, job details, and other important documents — is conveniently available
+                        within the application. This centralized platform allows candidates to track their progress,
+                        manage their apprenticeship records, and stay updated with every aspect of their job in real
+                        time.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <h4>
+                        <a href="https://play.google.com/store/apps/details?id=com.gigzd.app&pcampaignid=web_share
+                        " target="_blank" id="eat-redirection" class="Service-For">Try GoGig Company&nbsp;&#8599;</a>
+                    </h4>
+                    <p>Beyond apprenticeships, Gogig is also expanding to include gig job opportunities, enabling
+                        candidates to explore part-time work alongside their main apprenticeship roles. This feature
+                        empowers individuals to gain additional experience and earn extra income by taking on flexible
+                        jobs that fit around their schedules. Whether you're looking for a structured learning
+                        experience through an apprenticeship or a quick, part-time gig, Gogig provides the perfect
+                        platform to navigate and manage your career path efficiently.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <p>
+                        With its user-friendly interface and extensive job-tracking capabilities, Gogig is
+                        revolutionizing how candidates engage with apprenticeship and gig work opportunities, making it
+                        a one-stop solution for career growth and skill development.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    </main>
+
+    <!-- footer area start -->
+    <footer>
+        <div class="footer-container">
+            <div class="left-section">
+                <h1>Want to hire skilled <br />Employees?<br />Contact Us!</h1>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>OUR SERVICES:</h3>
+                        <ul>
+                            <li>Asessments</li>
+                            <li>Hirings</li>
+                            <li>Placements</li>
+                            <li>Skilling</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>OUR LOCATIONS:</h3>
+                        <ul>
+                            <li>Delhi</li>
+                            <li>Noida</li>
+                            <li>Chennai</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Details:</h3>
+                        <ul>
+                            <li>+91 11 4054 1330</li>
+                            <li>admin@eduvantage.in</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="location">
+                    <p>OUR LOCATION:</p>
+                    <span>Eduvantage Private Limited <br />
+                        1020-1023, 10th Floor, Devika Tower, Nehru Place, New Delhi-110019</span>
+                </div>
+                <div class="social-links">
+                    <p>OUR SOCIAL PRESENCE:</p>
+                    <div class="footer-social-buttons"><a
+                            href="https://www.linkedin.com/company/eduvantage-private-limited/about/"><i
+                                class="fab fa-linkedin"> </i> LinkedIn</a></div>
+                    <div class="footer-social-buttons"><a href="https://www.facebook.com/eduvantagejob"><i
+                                class="fab fa-facebook"></i> Facebook</a></div>
+                    <div class="footer-social-buttons"><a
+                            href="https://www.instagram.com/eduvantagepvt.ltd?igsh=endwdjdxeGp5enE5"><i
+                                class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="footer-social-buttons"><a href="https://www.youtube.com/watch?v=YlC_ZHEdsB8"><i
+                                class="fab fa-youtube"></i> Youtube</a></div>
+                </div>
+                <div class="get-in-touch-button">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="tp-footer__widget  pb-0">
+
+                            <a href="#">
+                                <div class="tp-theme-btn d-flex align-items-center white-bg">
+                                    <div class="tp-btn-inner">
+                                        <p class="mb-0">Let’t Talk</p>
+                                        <b>Get in Touch</b>
+                                        <span class="d-inline-block">
+                                            <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                            <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="row black-bg">
+            <div class="col-md-8 col-0">
+               <div class="tp-copyrigh-text mb-0">
+                  <span>© 2024 Eduvantage - Assessments/Apprenticeship . All Rights Reserved.</span>
+               </div>
+            </div>
+            <div class="col-md-4 col-12">
+               <div class="tp-footer-social-icon mb-15 text-md-end">
+                  <ul>
+                     <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                     <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                     <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div> -->
+        </div>
+        <!-- footer copy right -->
+        <div class="footer-bottom">
+            <p>Eduvantage Assessment Agency.</p>
+            <p>© 2024 All Rights Reserved</p>
+        </div>
+        <!-- <div class="top-footer-copyright pt-15 black-bg">
+         <div class="container"> -->
+
+        <!-- </div>
+      <!-- </div> -->
+        <!-- footer copyright end  -->
+    </footer>
+    <!-- footer area end -->
+
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/waypoints.js"></script>
+    <script src="assets/js/bootstrap-bundle.js"></script>
+    <script src="assets/js/meanmenu.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/parallax.js"></script>
+    <script src="assets/js/backtotop.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/isotope-pkgd.js"></script>
+    <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/highlight.js"></script>
+
+    <!-- Linking Swiper script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Linking custom script -->
+    <script src="assets/js/swiper.js"></script>
+    <script>
+        function setActive(el) {
+            // Remove active class from all items
+            const items = document.querySelectorAll('.navbar-item');
+            items.forEach((item) => item.classList.remove('navbar-item-active'));
+
+            // Add active class to the clicked item
+            el.classList.add('navbar-item-active');
+        }
+    </script>
+</body>
+
+</html>
