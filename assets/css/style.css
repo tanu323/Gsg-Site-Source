@@ -6201,7 +6201,7 @@ img {
 }
 
 .logo-card {
-  width: 86px;
+  width: 90px;
   height: 50px;
   margin-right: 25px;
   position: relative;
@@ -6299,7 +6299,7 @@ img {
   justify-content: space-between;
   border-radius: 10px;
   gap: 6vw;
-  padding: 2rem 4rem;
+  padding: 3rem 4rem;
 }
 
 
@@ -6612,7 +6612,9 @@ td {
 
 /* -------------------------------------------------------------------------Page 5 Blog Container start........................................................................ */
 
-
+#page5 {
+  padding: 4rem 0;
+}
 
 .blogs-section-container-1 {
   display: grid;
@@ -7009,21 +7011,19 @@ p {
 #news-sec {
   height: 100vh;
   width: 100%;
-  padding: 3rem 3rem;
+  padding: 2rem 3rem;
   height: max-content;
-  margin-bottom: 3vw;
 }
 
 #moving-news-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 63vh;
+  height: 65vh;
   overflow: hidden;
   position: relative;
-  padding: 2rem 3rem;
+  padding: 1rem 2rem;
   overflow-y: scroll;
-  background-color: #ccf4d9b4;
 }
 
 
