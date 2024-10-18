@@ -5788,56 +5788,48 @@ dropdown_list {
   max-height: 100vh;
   justify-content: center;
   align-items: center;
-  padding: 3rem 3rem;
+  padding: 1rem 3rem;
   height: 100vh;
   background-color: whitesmoke;
+  gap: 4rem;
 }
 
-.sales-support {
+.support {
   display: flex;
   gap: 30px;
-  width: 90%;
+  width: 100%;
   height: 100%;
   align-items: center;
-  padding: 2rem 3rem;
+  padding: 6rem 5rem;
+  /* background: #00fffc; */
 }
 
-.talk-to-sales {
+.left-contact-us {
   flex: 0.8;
   align-items: center;
-  /* background: #000; */
-  margin-top: 100px;
-  /* background-color: #00fffc; */
+  padding: 5rem 0rem;
 }
 
 .connect-with-edu {
   flex: 2;
   height: 100%;
-  /* padding: 3rem 8rem; */
-  /* background-color: rebeccapurple; */
-  /* padding: 30px; */
-  /* border-radius: 10px;
-  box-shadow: 0 4px 6px #007F83; */
-  margin-top: 100px;
+  padding: 0 4rem;
 }
 
-.talk-to-sales h2,
 .connect-with-edu h2 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
   color: #13A0A4;
   font-weight: 600;
 }
 
-.talk-to-sales p,
 .connect-with-edu p {
   font-size: 0.9rem;
   margin-bottom: 12px;
   color: #0F3C3E;
 }
 
-.talk-to-sales img {
-  height: 80px;
+.left-contact-us img {
+  height: 70px;
   width: 130px;
   max-width: 100%;
   display: flex;
@@ -5857,7 +5849,7 @@ dropdown_list {
 .socialmedia_icon {
   height: 35px;
   width: 35px;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   border: 2px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(45deg, #a6dcb9, #00fffc, #13A0A4);
@@ -5888,8 +5880,8 @@ dropdown_list {
 
 .submit-btn {
   padding: 5px 8px;
-  background-color: #A0F294;
-  color: #0F3C3E;
+  background: linear-gradient(45deg, #a6dcb9, #00fffc, #13A0A4);
+  color: white;
   font-weight: 400;
   border: none;
   border-radius: 4px;
