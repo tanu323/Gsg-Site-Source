@@ -32,6 +32,17 @@
   --tp-border-2: #F3F3F3;
   --tp-border-3: #D7D7D7;
   /**
+@new colors for buttons and links
+  */
+  --primary-button-bg: #059397;
+  --primary-button-hover-bg: #046f75;
+  --primary-button-text-color: #ffffff;
+  --secondary-button-bg: #f5f5f5;
+  --secondary-button-hover-bg: #e0e0e0;
+  --secondary-button-text-color: #171717;
+
+  /**
+
   @font weight declaration
   */
   --tp-fw-normal: normal;
@@ -70,11 +81,18 @@ body {
   font-size: var(--tp-fz-body);
   font-weight: normal;
   color: var(--tp-text-body);
-  line-height: 26px;
+  line-height: 1.5;
+  background-color: var(--tp-grey-2);
 }
 
 a {
   text-decoration: none;
+  color: var(--tp-heading-primary);
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--tp-heading-1);
 }
 
 h1,
@@ -5074,22 +5092,22 @@ blockquote cite::before {
   gap: 3vmin;
 }
 
-/* #video-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 40px;
-    height: 80vmin;
-    width: 100%;
-    margin-top: 5vmax;
-    justify-content: center;
-    align-items: center;
-  } */
+#video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+  height: 80vmin;
+  width: 100%;
+  /* margin-top: 5vmax; */
+  justify-content: center;
+  align-items: center;
+}
 
 #video-container video {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  /* border-radius: 40px; */
+  border-radius: 40px;
 }
 
 #centerpage1 h1 {
@@ -5366,16 +5384,16 @@ blockquote cite::before {
     align-items: center;
     min-height: 100vmax;
     overflow-y: scroll;
-    background: #000;
+    /* background: #000; */
   }
 
   #centerpage1 {
     flex-direction: column;
     align-items: center;
     height: 100%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     padding: 0;
-    background-color: #007F83;
+    /* background-color: #007F83; */
 
   }
 
@@ -6485,6 +6503,43 @@ img {
   /* Adjust padding to ensure space for the description */
 }
 
+/* Hide paragraph content on mobile */
+@media (max-width: 768px) {
+  .hidden-description {
+    display: none;
+    /* Hide paragraph on screens smaller than 768px */
+  }
+
+  .Govt-Client {
+    height: 50px;
+    /* Adjust height if needed for mobile */
+  }
+
+  .Govt-Client h2 {
+    font-size: 14px;
+    /* Adjust font size for mobile readability */
+  }
+
+  /* Additional styles for better mobile responsiveness */
+  #Govt-Clients {
+    width: 90%;
+    height: auto;
+    left: 5%;
+    top: 20%;
+  }
+
+  #page3 {
+    padding: 2vmax 1rem;
+  }
+
+  /* Optional: Adjust overlay and hover effects for smaller screens */
+  .Govt-Client .overlay {
+    top: 0;
+    /* Keep overlay effect intact on mobile if needed */
+  }
+}
+
+
 /* ---------------------------------------------------- Govt Client Section End---------------------------------- */
 
 
@@ -6672,14 +6727,14 @@ img {
 /* .video-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  width: 90%;
+  height: 70%;
+  border-radius: 30px;
 } */
 
 /* Once vedio-container gets the height video-wrapper also gets the height*/
-.video-wrapper {
-  /* flex: 0 0 90%; */
+/* .video-wrapper {
+  flex: 0 0 90%;
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
@@ -6689,7 +6744,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
+} */
 
 /* .video-wrapper img {
   width: 100%;
@@ -7768,3 +7823,350 @@ p {
 }
 
 /* News Section End */
+
+
+
+/* Make the section fully scrollable in both directions */
+@media (max-width: 768px) {
+  #our-Industries .row.justify-content-center.align-items-center {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling for iOS */
+    scroll-snap-type: x mandatory;
+    /* Snap to sections on scroll */
+    scroll-padding-left: 0;
+    /* Ensure scroll starts from the very left */
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .industries {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    /* Horizontal scroll for industries */
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-left: 0;
+    margin-left: 0;
+  }
+
+  .mailcolumn {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 0;
+    margin-left: 0;
+  }
+
+  .innercolumn {
+    flex: 0 0 auto;
+    min-width: 200px;
+    /* Adjust to fit items */
+    scroll-snap-align: start;
+    margin-right: 15px;
+  }
+
+  /* Visible scrollbar on mobile */
+  .row.justify-content-center.align-items-center::-webkit-scrollbar,
+  .mailcolumn::-webkit-scrollbar {
+    height: 8px;
+    /* Set scrollbar height */
+  }
+
+  .row.justify-content-center.align-items-center::-webkit-scrollbar-thumb,
+  .mailcolumn::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Scrollbar thumb color */
+    border-radius: 10px;
+    /* Rounded scrollbar */
+  }
+
+  .row.justify-content-center.align-items-center::-webkit-scrollbar-track,
+  .mailcolumn::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Scrollbar track color */
+  }
+
+  /* Ensure the initial scroll position starts from the very left */
+  #our-Industries .row.justify-content-center.align-items-center {
+    scroll-padding-left: 0;
+    scroll-snap-align: start;
+    margin-left: 0;
+    padding-left: 0;
+    /* scroll-left: 0px; Ensure initial scroll is at the leftmost part */
+  }
+
+  #our-Industries .container {
+    width: 100vw;
+    /* Full viewport width */
+    padding: 0;
+    margin-left: 0;
+  }
+}
+
+/*
+
+/* Make the table responsive */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on iOS */
+}
+
+.table-responsive table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-responsive th,
+.table-responsive td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  /* Optional: Add borders to table cells */
+}
+
+@media only screen and (max-width: 768px) {
+
+  /* Adjust font size and padding for smaller screens */
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Style for the process flow on desktop */
+.process-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.process-flow .step {
+  flex: 1;
+  min-width: 100px;
+  max-width: 150px;
+}
+
+.process-flow .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.process-flow .arrow {
+  font-size: 20px;
+  color: #13A0A4;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+
+  /* Stack the steps vertically */
+  .process-flow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust step size on mobile */
+  .process-flow .step {
+    max-width: 100%;
+  }
+
+  /* Adjust arrow size and visibility */
+  .process-flow .arrow {
+    display: none;
+  }
+
+  /* Adjust icon size on mobile */
+  .process-flow .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Adjust button and padding */
+  .tp-theme-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* General Swiper container styling */
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+/* Wrapper and slide adjustments */
+.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 300px;
+  /* Ensure consistent height */
+}
+
+/* Video section adjustments */
+.yt-vedio-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Responsive video iframe adjustments */
+.video-wrapper {
+  width: 100%;
+  max-width: 560px;
+  /* Restrict max width to prevent overflow */
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.v-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /* Optional for rounded corners */
+}
+
+/* Text section styling */
+.sec-left {
+  flex: 1;
+  max-width: 40%;
+}
+
+.sec-left h2 {
+  font-size: 24px;
+}
+
+.sec-left p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .yt-vedio-section {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .sec-left,
+  .sec-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* Maintain video aspect ratio */
+  }
+
+  /* Adjust heading and text sizes for mobile */
+  .sec-left h2 {
+    font-size: 18px;
+  }
+
+  .sec-left p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Adjust Swiper navigation button sizes */
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
+/* Main image container styling */
+#page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-top: 0;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  /* Set a background color matching your design */
+}
+
+#centerpage1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Image styling */
+.heroSection-img img {
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  /* Make it full viewport height to fill the screen */
+  display: block;
+  object-fit: cover;
+  /* Ensures the image covers the entire container */
+  object-position: center;
+  /* Centers the image in the container */
+  border-radius: 8px;
+  /* Optional */
+}
+
+/* Adjustments for mobile */
+@media (max-width: 768px) {
+  #page1 {
+    height: auto;
+    background-color: #f5f5f5;
+    /* Same background color as above */
+  }
+
+  .heroSection-img img {
+    width: 100vw;
+    /* Make image full width */
+    height: auto;
+    /* Allow height to adjust proportionally */
+    object-fit: cover;
+    /* Cover the width while maintaining the aspect ratio */
+  }
+}
